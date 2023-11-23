@@ -2,7 +2,7 @@
  * @Author: lijing
  * @Date: 2023-11-23 11:41:02
  * @LastEditors: lijing
- * @LastEditTime: 2023-11-23 22:44:48
+ * @LastEditTime: 2023-11-23 22:49:07
  * @Description: 
  */
 import { defineUserConfig,defaultTheme } from 'vuepress'
