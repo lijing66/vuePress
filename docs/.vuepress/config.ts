@@ -2,7 +2,7 @@
  * @Author: lijing
  * @Date: 2023-11-23 11:41:02
  * @LastEditors: lijing
- * @LastEditTime: 2023-11-23 22:49:07
+ * @LastEditTime: 2023-12-12 21:02:13
  * @Description: 
  */
 import { defineUserConfig,defaultTheme } from 'vuepress'
@@ -41,6 +41,7 @@ export default defineUserConfig({
     // 头部配置
     head: [['link', { rel: 'icon', href: '/images/donghua.gif' }],
     ],
+    displayAllHeaders: true,
     //新增导航条的配置
     theme: defaultTheme({
         // tab栏的图标; 图片 / 会自动去public文件夹里找图片
@@ -49,7 +50,7 @@ export default defineUserConfig({
         navbar: navbar,
         // 侧边栏数组
         // 所有页面会使用相同的侧边栏
-        sidebar: sidebar
+        sidebar: sidebar,
     }),
 })
 

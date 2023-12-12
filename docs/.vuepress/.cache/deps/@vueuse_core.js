@@ -5569,7 +5569,8 @@ function tracksToArray(tracks) {
 }
 var defaultOptions = {
   src: "",
-  tracks: []
+  tracks: [],
+  level: [2, 3],
 };
 function useMediaControls(target, options = {}) {
   options = {
