@@ -1,4 +1,11 @@
-<template><div><h1 id="选择排序" tabindex="-1"><a class="header-anchor" href="#选择排序" aria-hidden="true">#</a> 选择排序</h1>
+<template><div><!--
+ * @Author: lijing
+ * @Date: 2023-12-15 23:11:46
+ * @LastEditors: lijing
+ * @LastEditTime: 2024-01-13 22:35:09
+ * @Description: 
+-->
+<h1 id="选择排序" tabindex="-1"><a class="header-anchor" href="#选择排序" aria-hidden="true">#</a> 选择排序</h1>
 <h2 id="是什么" tabindex="-1"><a class="header-anchor" href="#是什么" aria-hidden="true">#</a> 是什么</h2>
 <p>选择排序（Selection sort）是一种简单直观的排序算法，无论什么数据进去都是 <code v-pre>O(n²)</code>的时间复杂度，所以用到它的时候，数据规模越小越好</p>
 <h2 id="思路" tabindex="-1"><a class="header-anchor" href="#思路" aria-hidden="true">#</a> 思路</h2>
@@ -10,24 +17,24 @@
 <ul>
 <li>第一次遍历时，从下标为 1 的位置即 56 开始，找出关键字值最小的记录 12，同下标为 0 的关键字 56 交换位置。此时数组为 12、56、80、91、20</li>
 </ul>
-<p><img src="/interview/assets/img/60bd2050-2671-11ec-a752-75723a64e8f5.74902ae6.png" alt=""></p>
+<p><img src="@source/pages/interview/算法与数据结构/img/01.png" alt="img"></p>
 <ul>
 <li>第二次遍历时，从下标为 2 的位置即 56 开始，找出最小值 20，同下标为 2 的关键字 56 互换位置，此时数组为12、20、80、91、56</li>
 </ul>
-<p><img src="/interview/assets/img/6b04cf40-2671-11ec-8e64-91fdec0f05a1.76fc9532.png" alt=""></p>
+<p><img src="@source/pages/interview/算法与数据结构/img/02.png" alt="img"></p>
 <ul>
 <li>第三次遍历时，从下标为 3 的位置即 80 开始，找出最小值 56，同下标为 3 的关键字 80 互换位置，此时数组为 12、20、56、91、80</li>
 </ul>
-<p><img src="/interview/assets/img/757f4e00-2671-11ec-a752-75723a64e8f5.9e96edf8.png" alt=""></p>
+<p><img src="@source/pages/interview/算法与数据结构/img/03.png" alt="img"></p>
 <ul>
 <li>第四次遍历时，从下标为 4 的位置即 91 开始，找出最小是 80，同下标为 4 的关键字 91 互换位置，此时排序完成，变成有序数组</li>
 </ul>
-<p><img src="http://fanyouf.gitee.io/interview/algorithm//interview/assets/img/757f4e00-2671-11ec-a752-75723a64e8f5-20220815165730949.9e96edf8.png" alt=""></p>
+<p><img src="@source/pages/interview/算法与数据结构/img/04.png" alt="img"></p>
 <h2 id="二、如何实现" tabindex="-1"><a class="header-anchor" href="#二、如何实现" aria-hidden="true">#</a> 二、如何实现</h2>
 <p>从上面可以看到，对于具有 <code v-pre>n</code> 个记录的无序表遍历 <code v-pre>n-1</code> 次，第<code v-pre>i</code> 次从无序表中第 <code v-pre>i</code> 个记录开始，找出后序关键字中最小的记录，然后放置在第 <code v-pre>i</code> 的位置上</p>
 <p>直至到从第<code v-pre>n</code>个和第<code v-pre>n-1</code>个元素中选出最小的放在第<code v-pre>n-1</code>个位置</p>
 <p>如下动画所示：</p>
-<p><img src="http://fanyouf.gitee.io/interview/assets/img/selectionSort.44be35da.gif" alt=""></p>
+<p><img src="@source/pages/interview/算法与数据结构/img/05.gif" alt="img"></p>
 <p>用代码表示则如下：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span>
 <span class="token comment">// 选择排序</span>
