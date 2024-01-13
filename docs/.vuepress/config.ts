@@ -2,7 +2,7 @@
  * @Author: lijing
  * @Date: 2023-11-23 11:41:02
  * @LastEditors: lijing
- * @LastEditTime: 2023-12-12 21:02:13
+ * @LastEditTime: 2024-01-13 21:13:26
  * @Description: 
  */
 import { defineUserConfig,defaultTheme } from 'vuepress'
@@ -31,7 +31,8 @@ export default defineUserConfig({
     ],
 
     // 打包后html内部资源访问路径
-    base:'./',
+    // base:'./',
+    base: "/vuePress/",
     // 打包后的文件放哪
     dest:"dist/",
     lang: 'zh-CN',

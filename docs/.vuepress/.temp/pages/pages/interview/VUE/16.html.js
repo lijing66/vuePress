@@ -1,4 +1,4 @@
-export const data = JSON.parse("{\"key\":\"v-596e43f9\",\"path\":\"/pages/interview/VUE/16.html\",\"title\":\"vue.use\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"简版\",\"slug\":\"简版\",\"link\":\"#简版\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"pages/interview/VUE/16.md\"}")
+export const data = JSON.parse("{\"key\":\"v-596e43f9\",\"path\":\"/pages/interview/VUE/16.html\",\"title\":\"vue.use\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"简版\",\"slug\":\"简版\",\"link\":\"#简版\",\"children\":[]}],\"git\":{\"updatedTime\":1705143250000,\"contributors\":[{\"name\":\"lijing\",\"email\":\"lijing@aipark.com\",\"commits\":1}]},\"filePathRelative\":\"pages/interview/VUE/16.md\"}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()
