@@ -131,7 +131,7 @@ export const pagesRoutes = [
   ["v-4970c299","/pages/interview/versionControl/08.html",{"title":"git rebase 和 git merge 的区别"},[":md"]],
   ["v-1bffcd9d","/pages/interview/VUE/01.html",{"title":"响应式原理"},[":md"]],
   ["v-1db4a63c","/pages/interview/VUE/02.html",{"title":"虚拟 DOM"},[":md"]],
-  ["v-1f697edb","/pages/interview/VUE/03.html",{"title":"Vue2 的 diff 算法"},[":md"]],
+  ["v-1f697edb","/pages/interview/VUE/03.html",{"title":"# Vue2 的 diff 算法"},[":md"]],
   ["v-211e577a","/pages/interview/VUE/04.html",{"title":"vue 中的 key"},[":md"]],
   ["v-22d33019","/pages/interview/VUE/05.html",{"title":"Vue 中的$nextTick"},[":md"]],
   ["v-248808b8","/pages/interview/VUE/06.html",{"title":"什么是$set？"},[":md"]],
