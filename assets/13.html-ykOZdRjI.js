@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-7a81a599","path":"/pages/interview/CSS/13.html","title":"link 和 import 的区别","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1705143250000,"contributors":[{"name":"lijing","email":"lijing@aipark.com","commits":2}]},"filePathRelative":"pages/interview/CSS/13.md"}');export{e as data};

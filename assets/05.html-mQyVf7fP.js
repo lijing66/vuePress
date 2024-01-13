@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-29606def","path":"/pages/interview/%E6%89%8B%E5%86%99/05.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1705143250000,"contributors":[{"name":"lijing","email":"lijing@aipark.com","commits":1}]},"filePathRelative":"pages/interview/手写/05.md"}');export{e as data};
