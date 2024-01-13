@@ -103,12 +103,6 @@ export const pagesData = {
   "v-8c594b50": () => import(/* webpackChunkName: "v-8c594b50" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/Linux操作系统/06.html.js").then(({ data }) => data),
   // path: /pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/07.html
   "v-88ef9a12": () => import(/* webpackChunkName: "v-88ef9a12" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/Linux操作系统/07.html.js").then(({ data }) => data),
-  // path: /pages/interview/nb/01.html
-  "v-7e91fae2": () => import(/* webpackChunkName: "v-7e91fae2" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/nb/01.html.js").then(({ data }) => data),
-  // path: /pages/interview/nb/02.html
-  "v-7b2849a4": () => import(/* webpackChunkName: "v-7b2849a4" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/nb/02.html.js").then(({ data }) => data),
-  // path: /pages/interview/nb/03.html
-  "v-77be9866": () => import(/* webpackChunkName: "v-77be9866" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/nb/03.html.js").then(({ data }) => data),
   // path: /pages/interview/network/01.html
   "v-3bbefb65": () => import(/* webpackChunkName: "v-3bbefb65" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/network/01.html.js").then(({ data }) => data),
   // path: /pages/interview/network/02.html
@@ -133,6 +127,12 @@ export const pagesData = {
   "v-70a536a6": () => import(/* webpackChunkName: "v-70a536a6" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/network/11.html.js").then(({ data }) => data),
   // path: /pages/interview/network/12.html
   "v-725a0f45": () => import(/* webpackChunkName: "v-725a0f45" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/network/12.html.js").then(({ data }) => data),
+  // path: /pages/interview/nb/01.html
+  "v-7e91fae2": () => import(/* webpackChunkName: "v-7e91fae2" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/nb/01.html.js").then(({ data }) => data),
+  // path: /pages/interview/nb/02.html
+  "v-7b2849a4": () => import(/* webpackChunkName: "v-7b2849a4" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/nb/02.html.js").then(({ data }) => data),
+  // path: /pages/interview/nb/03.html
+  "v-77be9866": () => import(/* webpackChunkName: "v-77be9866" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/nb/03.html.js").then(({ data }) => data),
   // path: /pages/interview/nodejs/01.html
   "v-081ab0b4": () => import(/* webpackChunkName: "v-081ab0b4" */"D:/XiangMu/归档/github/vuePress/docs/.vuepress/.temp/pages/pages/interview/nodejs/01.html.js").then(({ data }) => data),
   // path: /pages/interview/nodejs/02.html

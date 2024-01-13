@@ -2,7 +2,7 @@
  * @Author: lijing
  * @Date: 2023-11-23 11:41:02
  * @LastEditors: lijing
- * @LastEditTime: 2024-01-13 21:13:26
+ * @LastEditTime: 2024-01-13 23:02:38
  * @Description: 
  */
 import { defineUserConfig,defaultTheme } from 'vuepress'
@@ -34,7 +34,7 @@ export default defineUserConfig({
     // base:'./',
     base: "/vuePress/",
     // 打包后的文件放哪
-    dest:"dist/",
+    // dest:"dist/",
     lang: 'zh-CN',
     // 标题
     title: '月照一江秋水',
@@ -42,7 +42,6 @@ export default defineUserConfig({
     // 头部配置
     head: [['link', { rel: 'icon', href: '/images/donghua.gif' }],
     ],
-    displayAllHeaders: true,
     //新增导航条的配置
     theme: defaultTheme({
         // tab栏的图标; 图片 / 会自动去public文件夹里找图片
