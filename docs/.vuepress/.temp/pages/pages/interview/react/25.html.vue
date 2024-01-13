@@ -3,43 +3,43 @@
 <h2 id="一、原理" tabindex="-1"><a class="header-anchor" href="#一、原理" aria-hidden="true">#</a> 一、原理</h2>
 <p>首先，<code v-pre>render</code>函数在<code v-pre>react</code>中有两种形式：</p>
 <p>在类组件中，指的是<code v-pre>render</code>方法：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>class Foo extends React.Component {
-    render() {
-        return &lt;h1> Foo &lt;/h1>;
-    }
-}
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>h1<span class="token operator">></span> Foo <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在函数组件中，指的是函数组件本身：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>function Foo() {
-    return &lt;h1> Foo &lt;/h1>;
-}
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>h1<span class="token operator">></span> Foo <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在<code v-pre>render</code>中，我们会编写<code v-pre>jsx</code>，<code v-pre>jsx</code>通过<code v-pre>babel</code>编译后就会转化成我们熟悉的<code v-pre>js</code>格式，如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>return (
-  &lt;div className='cn'>
-    &lt;Header> hello &lt;/Header>
-    &lt;div> start &lt;/div>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">return</span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'cn'</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>Header<span class="token operator">></span> hello <span class="token operator">&lt;</span><span class="token operator">/</span>Header<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span> start <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     Right Reserve
-  &lt;/div>
-)
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>babel</code>编译后：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>return (
-  React.createElement(
-    'div',
-    {
-      className : 'cn'
-    },
-    React.createElement(
-      Header,
-      null,
-      'hello'
-    ),
-    React.createElement(
-      'div',
-      null,
-      'start'
-    ),
-    'Right Reserve'
-  )
-)
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">return</span> <span class="token punctuation">(</span>
+  React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>
+    <span class="token string">'div'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">className</span> <span class="token operator">:</span> <span class="token string">'cn'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>
+      Header<span class="token punctuation">,</span>
+      <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">'hello'</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>
+      <span class="token string">'div'</span><span class="token punctuation">,</span>
+      <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">'start'</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string">'Right Reserve'</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>从名字上来看，<code v-pre>createElement</code>方法用来元素的</p>
 <p>在<code v-pre>react</code>中，这个元素就是虚拟<code v-pre>DOM</code>树的节点，接收三个参数：</p>
 <ul>
@@ -60,103 +60,103 @@
 <ul>
 <li>类组件调用 setState 修改状态</li>
 </ul>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>class Foo extends React.Component {
-  state = { count: 0 };
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  increment = () => {
-    const { count } = this.state;
+  <span class="token function-variable function">increment</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> count <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
 
-    const newCount = count &lt; 10 ? count + 1 : count;
+    <span class="token keyword">const</span> newCount <span class="token operator">=</span> count <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> count <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">:</span> count<span class="token punctuation">;</span>
 
-    this.setState({ count: newCount });
-  };
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> newCount <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  render() {
-    const { count } = this.state;
-    console.log("Foo render");
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> count <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Foo render"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    return (
-      &lt;div>
-        &lt;h1> {count} &lt;/h1>
-        &lt;button onClick={this.increment}>Increment&lt;/button>
-      &lt;/div>
-    );
-  }
-}
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>h1<span class="token operator">></span> <span class="token punctuation">{</span>count<span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>increment<span class="token punctuation">}</span><span class="token operator">></span>Increment<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>点击按钮，则调用<code v-pre>setState</code>方法，无论<code v-pre>count</code>发生变化辩护，控制台都会输出<code v-pre>Foo render</code>，证明<code v-pre>render</code>执行了</p>
 <ul>
 <li>函数组件通过<code v-pre>useState hook</code>修改状态</li>
 </ul>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>function Foo() {
-  const [count, setCount] = useState(0);
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  function increment() {
-    const newCount = count &lt; 10 ? count + 1 : count;
-    setCount(newCount);
-  }
+  <span class="token keyword">function</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> newCount <span class="token operator">=</span> count <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> count <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">:</span> count<span class="token punctuation">;</span>
+    <span class="token function">setCount</span><span class="token punctuation">(</span>newCount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  console.log("Foo render");
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Foo render"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   
-  return (
-    &lt;div>
-      &lt;h1> {count} &lt;/h1>
-      &lt;button onClick={increment}>Increment&lt;/button>
-    &lt;/div>
-  );
-}
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>h1<span class="token operator">></span> <span class="token punctuation">{</span>count<span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+      <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>increment<span class="token punctuation">}</span><span class="token operator">></span>Increment<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>函数组件通过<code v-pre>useState</code>这种形式更新数据，当数组的值不发生改变了，就不会触发<code v-pre>render</code></p>
 <ul>
 <li>类组件重新渲染</li>
 </ul>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>class App extends React.Component {
-  state = { name: "App" };
-  render() {
-    return (
-      &lt;div className="App">
-        &lt;Foo />
-        &lt;button onClick={() => this.setState({ name: "App" })}>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"App"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Foo <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"App"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
           Change name
-        &lt;/button>
-      &lt;/div>
-    );
-  }
-}
+        <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-function Foo() {
-  console.log("Foo render");
+<span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Foo render"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  return (
-    &lt;div>
-      &lt;h1> Foo &lt;/h1>
-    &lt;/div>
-  );
-}
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>h1<span class="token operator">></span> Foo <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>只要点击了 <code v-pre>App</code> 组件内的 <code v-pre>Change name</code> 按钮，不管 <code v-pre>Foo</code> 具体实现是什么，都会被重新<code v-pre>render</code>渲染</p>
 <ul>
 <li>函数组件重新渲染</li>
 </ul>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>function App(){
-    const [name,setName] = useState('App')
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span>setName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'App'</span><span class="token punctuation">)</span>
 
-    return (
-        &lt;div className="App">
-            &lt;Foo />
-            &lt;button onClick={() => setName("aaa")}>
-                { name }
-            &lt;/button>
-      &lt;/div>
-    )
-}
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>Foo <span class="token operator">/</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"aaa"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+                <span class="token punctuation">{</span> name <span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-function Foo() {
-  console.log("Foo render");
+<span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Foo render"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  return (
-    &lt;div>
-      &lt;h1> Foo &lt;/h1>
-    &lt;/div>
-  );
-}
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>h1<span class="token operator">></span> Foo <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以发现，使用<code v-pre>useState</code>来更新状态的时候，只有首次会触发<code v-pre>Foo render</code>，后面并不会导致<code v-pre>Foo render</code></p>
 <h2 id="三、总结" tabindex="-1"><a class="header-anchor" href="#三、总结" aria-hidden="true">#</a> 三、总结</h2>
 <p><code v-pre>render</code>函数里面可以编写<code v-pre>JSX</code>，转化成<code v-pre>createElement</code>这种形式，用于生成虚拟<code v-pre>DOM</code>，最终转化成真实<code v-pre>DOM</code></p>

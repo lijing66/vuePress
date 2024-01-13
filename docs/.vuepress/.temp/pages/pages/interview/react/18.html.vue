@@ -18,53 +18,53 @@
 <p>所以可以利用这一点，通过<code v-pre>css</code>的<code v-pre>transition</code>属性，让元素在两个状态之间平滑过渡，从而得到相应的动画效果</p>
 <p>当<code v-pre>in</code>属性置为<code v-pre>false</code>时，<code v-pre>CSSTransition</code>会给子组件加上<code v-pre>xxx-exit</code>和<code v-pre>xxx-exit-active</code>的<code v-pre>class</code>，然后开始执行动画，当动画结束后，移除两个<code v-pre>class</code>，然后添加<code v-pre>-enter-done</code>的<code v-pre>class</code></p>
 <p>如下例子：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>export default class App2 extends React.PureComponent {
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App2</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>PureComponent</span> <span class="token punctuation">{</span>
 
-  state = {show: true};
+  state <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">show</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  onToggle = () => this.setState({show: !this.state.show});
+  <span class="token function-variable function">onToggle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">show</span><span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>show<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  render() {
-    const {show} = this.state;
-    return (
-      &lt;div className={'container'}>
-        &lt;div className={'square-wrapper'}>
-          &lt;CSSTransition
-            in={show}
-            timeout={500}
-            classNames={'fade'}
-            unmountOnExit={true}
-          >
-            &lt;div className={'square'} />
-          &lt;/CSSTransition>
-        &lt;/div>
-        &lt;Button onClick={this.onToggle}>toggle&lt;/Button>
-      &lt;/div>
-    );
-  }
-}
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>show<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'container'</span><span class="token punctuation">}</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'square-wrapper'</span><span class="token punctuation">}</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>CSSTransition
+            <span class="token keyword">in</span><span class="token operator">=</span><span class="token punctuation">{</span>show<span class="token punctuation">}</span>
+            timeout<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">500</span><span class="token punctuation">}</span>
+            classNames<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'fade'</span><span class="token punctuation">}</span>
+            unmountOnExit<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span>
+          <span class="token operator">></span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'square'</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>CSSTransition<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onToggle<span class="token punctuation">}</span><span class="token operator">></span>toggle<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>对应<code v-pre>css</code>样式如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>.fade-enter {
-  opacity: 0;
-  transform: translateX(100%);
-}
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token punctuation">.</span>fade<span class="token operator">-</span>enter <span class="token punctuation">{</span>
+  <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.fade-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 500ms;
-}
+<span class="token punctuation">.</span>fade<span class="token operator">-</span>enter<span class="token operator">-</span>active <span class="token punctuation">{</span>
+  <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">transition</span><span class="token operator">:</span> all 500ms<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.fade-exit {
-  opacity: 1;
-  transform: translateX(0);
-}
+<span class="token punctuation">.</span>fade<span class="token operator">-</span>exit <span class="token punctuation">{</span>
+  <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.fade-exit-active {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: all 500ms;
-}
+<span class="token punctuation">.</span>fade<span class="token operator">-</span>exit<span class="token operator">-</span>active <span class="token punctuation">{</span>
+  <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">transition</span><span class="token operator">:</span> all 500ms<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="switchtransition" tabindex="-1"><a class="header-anchor" href="#switchtransition" aria-hidden="true">#</a> SwitchTransition</h3>
 <p><code v-pre>SwitchTransition</code>可以完成两个组件之间切换的炫酷动画</p>
 <p>比如有一个按钮需要在<code v-pre>on</code>和<code v-pre>off</code>之间切换，我们希望看到<code v-pre>on</code>先从左侧退出，<code v-pre>off</code>再从右侧进入</p>
@@ -76,61 +76,61 @@
 <p><code v-pre>SwitchTransition</code>组件里面要有<code v-pre>CSSTransition</code>，不能直接包裹你想要切换的组件</p>
 <p>里面的<code v-pre>CSSTransition</code>组件不再像以前那样接受<code v-pre>in</code>属性来判断元素是何种状态，取而代之的是<code v-pre>key</code>属性</p>
 <p>下面给出一个按钮入场和出场的示例，如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>import { SwitchTransition, CSSTransition } from "react-transition-group";
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> SwitchTransition<span class="token punctuation">,</span> CSSTransition <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-transition-group"</span><span class="token punctuation">;</span>
 
-export default class SwitchAnimation extends PureComponent {
-  constructor(props) {
-    super(props);
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">SwitchAnimation</span> <span class="token keyword">extends</span> <span class="token class-name">PureComponent</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    this.state = {
-      isOn: true
-    }
-  }
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">isOn</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 
-  render() {
-    const {isOn} = this.state;
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>isOn<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
 
-    return (
-      &lt;SwitchTransition mode="out-in">
-        &lt;CSSTransition classNames="btn"
-                       timeout={500}
-                       key={isOn ? "on" : "off"}>
-          {
-          &lt;button onClick={this.btnClick.bind(this)}>
-            {isOn ? "on": "off"}
-          &lt;/button>
-        }
-        &lt;/CSSTransition>
-      &lt;/SwitchTransition>
-    )
-  }
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>SwitchTransition mode<span class="token operator">=</span><span class="token string">"out-in"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>CSSTransition classNames<span class="token operator">=</span><span class="token string">"btn"</span>
+                       timeout<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">500</span><span class="token punctuation">}</span>
+                       key<span class="token operator">=</span><span class="token punctuation">{</span>isOn <span class="token operator">?</span> <span class="token string">"on"</span> <span class="token operator">:</span> <span class="token string">"off"</span><span class="token punctuation">}</span><span class="token operator">></span>
+          <span class="token punctuation">{</span>
+          <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">btnClick</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+            <span class="token punctuation">{</span>isOn <span class="token operator">?</span> <span class="token string">"on"</span><span class="token operator">:</span> <span class="token string">"off"</span><span class="token punctuation">}</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+        <span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>CSSTransition<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>SwitchTransition<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  btnClick() {
-    this.setState({isOn: !this.state.isOn})
-  }
-}
+  <span class="token function">btnClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">isOn</span><span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>isOn<span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>css</code>文件对应如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>.btn-enter {
-  transform: translate(100%, 0);
-  opacity: 0;
-}
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token punctuation">.</span>btn<span class="token operator">-</span>enter <span class="token punctuation">{</span>
+  <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.btn-enter-active {
-  transform: translate(0, 0);
-  opacity: 1;
-  transition: all 500ms;
-}
+<span class="token punctuation">.</span>btn<span class="token operator">-</span>enter<span class="token operator">-</span>active <span class="token punctuation">{</span>
+  <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">transition</span><span class="token operator">:</span> all 500ms<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.btn-exit {
-  transform: translate(0, 0);
-  opacity: 1;
-}
+<span class="token punctuation">.</span>btn<span class="token operator">-</span>exit <span class="token punctuation">{</span>
+  <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.btn-exit-active {
-  transform: translate(-100%, 0);
-  opacity: 0;
-  transition: all 500ms;
-}
+<span class="token punctuation">.</span>btn<span class="token operator">-</span>exit<span class="token operator">-</span>active <span class="token punctuation">{</span>
+  <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">transition</span><span class="token operator">:</span> all 500ms<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="transitiongroup" tabindex="-1"><a class="header-anchor" href="#transitiongroup" aria-hidden="true">#</a> TransitionGroup</h3>
 <p>当有一组动画的时候，就可将这些<code v-pre>CSSTransition</code>放入到一个<code v-pre>TransitionGroup</code>中来完成动画</p>
 <p>同样<code v-pre>CSSTransition</code>里面没有<code v-pre>in</code>属性，用到了<code v-pre>key</code>属性</p>
@@ -145,65 +145,65 @@ export default class SwitchAnimation extends PureComponent {
 </li>
 </ul>
 <p>如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>import React, { PureComponent } from 'react'
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> PureComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CSSTransition<span class="token punctuation">,</span> TransitionGroup <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-transition-group'</span><span class="token punctuation">;</span>
 
-export default class GroupAnimation extends PureComponent {
-  constructor(props) {
-    super(props);
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">GroupAnimation</span> <span class="token keyword">extends</span> <span class="token class-name">PureComponent</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    this.state = {
-      friends: []
-    }
-  }
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">friends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 
-  render() {
-    return (
-      &lt;div>
-        &lt;TransitionGroup>
-          {
-            this.state.friends.map((item, index) => {
-              return (
-                &lt;CSSTransition classNames="friend" timeout={300} key={index}>
-                  &lt;div>{item}&lt;/div>
-                &lt;/CSSTransition>
-              )
-            })
-          }
-        &lt;/TransitionGroup>
-        &lt;button onClick={e => this.addFriend()}>+friend&lt;/button>
-      &lt;/div>
-    )
-  }
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>TransitionGroup<span class="token operator">></span>
+          <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>friends<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token punctuation">(</span>
+                <span class="token operator">&lt;</span>CSSTransition classNames<span class="token operator">=</span><span class="token string">"friend"</span> timeout<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">300</span><span class="token punctuation">}</span> key<span class="token operator">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token operator">></span>
+                  <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span>item<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>CSSTransition<span class="token operator">></span>
+              <span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>TransitionGroup<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">addFriend</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">+</span>friend<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  addFriend() {
-    this.setState({
-      friends: [...this.state.friends, "coderwhy"]
-    })
-  }
-}
+  <span class="token function">addFriend</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">friends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>friends<span class="token punctuation">,</span> <span class="token string">"coderwhy"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>对应<code v-pre>css</code>如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>.friend-enter {
-    transform: translate(100%, 0);
-    opacity: 0;
-}
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token punctuation">.</span>friend<span class="token operator">-</span>enter <span class="token punctuation">{</span>
+    <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.friend-enter-active {
-    transform: translate(0, 0);
-    opacity: 1;
-    transition: all 500ms;
-}
+<span class="token punctuation">.</span>friend<span class="token operator">-</span>enter<span class="token operator">-</span>active <span class="token punctuation">{</span>
+    <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token literal-property property">transition</span><span class="token operator">:</span> all 500ms<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.friend-exit {
-    transform: translate(0, 0);
-    opacity: 1;
-}
+<span class="token punctuation">.</span>friend<span class="token operator">-</span>exit <span class="token punctuation">{</span>
+    <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.friend-exit-active {
-    transform: translate(-100%, 0);
-    opacity: 0;
-    transition: all 500ms;
-}
+<span class="token punctuation">.</span>friend<span class="token operator">-</span>exit<span class="token operator">-</span>active <span class="token punctuation">{</span>
+    <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token literal-property property">transition</span><span class="token operator">:</span> all 500ms<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="参考文献" tabindex="-1"><a class="header-anchor" href="#参考文献" aria-hidden="true">#</a> 参考文献</h2>
 <ul>
 <li>https://segmentfault.com/a/1190000018861018</li>

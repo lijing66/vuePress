@@ -26,32 +26,32 @@
 </ul>
 <h3 id="在组件内直接使用" tabindex="-1"><a class="header-anchor" href="#在组件内直接使用" aria-hidden="true">#</a> 在组件内直接使用</h3>
 <p>直接在组件中书写<code v-pre>css</code>样式，通过<code v-pre>style</code>属性直接引入，如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>import React, { Component } from "react";
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 
-const div1 = {
-  width: "300px",
-  margin: "30px auto",
-  backgroundColor: "#44014C",  //驼峰法
-  minHeight: "200px",
-  boxSizing: "border-box"
-};
+<span class="token keyword">const</span> div1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token string">"300px"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> <span class="token string">"30px auto"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">backgroundColor</span><span class="token operator">:</span> <span class="token string">"#44014C"</span><span class="token punctuation">,</span>  <span class="token comment">//驼峰法</span>
+  <span class="token literal-property property">minHeight</span><span class="token operator">:</span> <span class="token string">"200px"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">boxSizing</span><span class="token operator">:</span> <span class="token string">"border-box"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-class Test extends Component {
-  constructor(props, context) {
-    super(props);
-  }
+<span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
  
-  render() {
-    return (
-     &lt;div>
-       &lt;div style={div1}>123&lt;/div>
-       &lt;div style={{backgroundColor:"red"}}>
-     &lt;/div>
-    );
-  }
-}
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+     <span class="token operator">&lt;</span>div<span class="token operator">></span>
+       <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token punctuation">{</span>div1<span class="token punctuation">}</span><span class="token operator">></span><span class="token number">123</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+       <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token literal-property property">backgroundColor</span><span class="token operator">:</span><span class="token string">"red"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-export default Test;
+<span class="token keyword">export</span> <span class="token keyword">default</span> Test<span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面可以看到，<code v-pre>css</code>属性需要转换成驼峰写法</p>
 <p>这种方式优点：</p>
 <ul>
@@ -76,54 +76,54 @@ export default Test;
 <h3 id="组件中引入css文件" tabindex="-1"><a class="header-anchor" href="#组件中引入css文件" aria-hidden="true">#</a> 组件中引入css文件</h3>
 <p>将<code v-pre>css</code>单独写在一个<code v-pre>css</code>文件中，然后在组件中直接引入</p>
 <p><code v-pre>App.css</code>文件：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>.title {
-  color: red;
-  font-size: 20px;
-}
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token punctuation">.</span>title <span class="token punctuation">{</span>
+  <span class="token literal-property property">color</span><span class="token operator">:</span> red<span class="token punctuation">;</span>
+  font<span class="token operator">-</span>size<span class="token operator">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-.desc {
-  color: green;
-  text-decoration: underline;
-}
+<span class="token punctuation">.</span>desc <span class="token punctuation">{</span>
+  <span class="token literal-property property">color</span><span class="token operator">:</span> green<span class="token punctuation">;</span>
+  text<span class="token operator">-</span>decoration<span class="token operator">:</span> underline<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>组件中引入：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>import React, { PureComponent } from 'react';
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> PureComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
-import Home from './Home';
+<span class="token keyword">import</span> Home <span class="token keyword">from</span> <span class="token string">'./Home'</span><span class="token punctuation">;</span>
 
-import './App.css';
+<span class="token keyword">import</span> <span class="token string">'./App.css'</span><span class="token punctuation">;</span>
 
-export default class App extends PureComponent {
-  render() {
-    return (
-      &lt;div className="app">
-        &lt;h2 className="title">我是App的标题&lt;/h2>
-        &lt;p className="desc">我是App中的一段文字描述&lt;/p >
-        &lt;Home/>
-      &lt;/div>
-    )
-  }
-}
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">PureComponent</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>h2 className<span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">></span>我是App的标题<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p className<span class="token operator">=</span><span class="token string">"desc"</span><span class="token operator">></span>我是App中的一段文字描述<span class="token operator">&lt;</span><span class="token operator">/</span>p <span class="token operator">></span>
+        <span class="token operator">&lt;</span>Home<span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这种方式存在不好的地方在于样式是全局生效，样式之间会互相影响</p>
 <h3 id="组件中引入-module-css-文件" tabindex="-1"><a class="header-anchor" href="#组件中引入-module-css-文件" aria-hidden="true">#</a> 组件中引入 .module.css 文件</h3>
 <p>将<code v-pre>css</code>文件作为一个模块引入，这个模块中的所有<code v-pre>css</code>，只作用于当前组件。不会影响当前组件的后代组件</p>
 <p>这种方式是<code v-pre>webpack</code>特工的方案，只需要配置<code v-pre>webpack</code>配置文件中<code v-pre>modules:true</code>即可</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>import React, { PureComponent } from 'react';
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> PureComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
-import Home from './Home';
+<span class="token keyword">import</span> Home <span class="token keyword">from</span> <span class="token string">'./Home'</span><span class="token punctuation">;</span>
 
-import './App.module.css';
+<span class="token keyword">import</span> <span class="token string">'./App.module.css'</span><span class="token punctuation">;</span>
 
-export default class App extends PureComponent {
-  render() {
-    return (
-      &lt;div className="app">
-        &lt;h2 className="title">我是App的标题&lt;/h2>
-        &lt;p className="desc">我是App中的一段文字描述&lt;/p >
-        &lt;Home/>
-      &lt;/div>
-    )
-  }
-}
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">PureComponent</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>h2 className<span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">></span>我是App的标题<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p className<span class="token operator">=</span><span class="token string">"desc"</span><span class="token operator">></span>我是App中的一段文字描述<span class="token operator">&lt;</span><span class="token operator">/</span>p <span class="token operator">></span>
+        <span class="token operator">&lt;</span>Home<span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这种方式能够解决局部作用域问题，但也有一定的缺陷：</p>
 <ul>
 <li>引用的类名，不能使用连接符(.xxx-xx)，在 JavaScript 中是不识别的</li>
@@ -146,42 +146,42 @@ export default class App extends PureComponent {
 </ul>
 <p>基本使用如下：</p>
 <p>创建一个<code v-pre>style.js</code>文件用于存放样式组件：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>export const SelfLink = styled.div`
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">const</span> SelfLink <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   height: 50px;
   border: 1px solid red;
   color: yellow;
-`;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
 
-export const SelfButton = styled.div`
+<span class="token keyword">export</span> <span class="token keyword">const</span> SelfButton <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   height: 150px;
   width: 150px;
-  color: ${props => props.color};
-  background-image: url(${props => props.src});
+  color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token parameter">props</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>color<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+  background-image: url(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token parameter">props</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>src<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">);
   background-size: 150px 150px;
-`;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>引入样式组件也很简单：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>import React, { Component } from "react";
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 
-import { SelfLink, SelfButton } from "./style";
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SelfLink<span class="token punctuation">,</span> SelfButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./style"</span><span class="token punctuation">;</span>
 
-class Test extends Component {
-  constructor(props, context) {
-    super(props);
-  }  
+<span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>  
  
-  render() {
-    return (
-     &lt;div>
-       &lt;SelfLink title="People's Republic of China">app.js&lt;/SelfLink>
-       &lt;SelfButton color="palevioletred" style={{ color: "pink" }} src={fist}>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+     <span class="token operator">&lt;</span>div<span class="token operator">></span>
+       <span class="token operator">&lt;</span>SelfLink title<span class="token operator">=</span><span class="token string">"People's Republic of China"</span><span class="token operator">></span>app<span class="token punctuation">.</span>js<span class="token operator">&lt;</span><span class="token operator">/</span>SelfLink<span class="token operator">></span>
+       <span class="token operator">&lt;</span>SelfButton color<span class="token operator">=</span><span class="token string">"palevioletred"</span> style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">"pink"</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> src<span class="token operator">=</span><span class="token punctuation">{</span>fist<span class="token punctuation">}</span><span class="token operator">></span>
           SelfButton
-        &lt;/SelfButton>
-     &lt;/div>
-    );
-  }
-}
+        <span class="token operator">&lt;</span><span class="token operator">/</span>SelfButton<span class="token operator">></span>
+     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-export default Test;
+<span class="token keyword">export</span> <span class="token keyword">default</span> Test<span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="三、区别" tabindex="-1"><a class="header-anchor" href="#三、区别" aria-hidden="true">#</a> 三、区别</h2>
 <p>通过上面四种样式的引入，可以看到：</p>
 <ul>

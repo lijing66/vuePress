@@ -720,6 +720,1430 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "说说你对操作系统的理解？核心概念有哪些？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、核心概念",
+        "slug": "二、核心概念",
+        "link": "#二、核心概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三、总结",
+        "slug": "三、总结",
+        "link": "#三、总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/01.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说什么是进程？什么是线程？区别？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、进程",
+        "slug": "一、进程",
+        "link": "#一、进程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、线程",
+        "slug": "二、线程",
+        "link": "#二、线程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三、区别",
+        "slug": "三、区别",
+        "link": "#三、区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/02.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说 linux系统下 文件操作常用的命令有哪些？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、文件操作",
+        "slug": "二、文件操作",
+        "link": "#二、文件操作",
+        "children": [
+          {
+            "level": 3,
+            "title": "ls",
+            "slug": "ls",
+            "link": "#ls",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "cd",
+            "slug": "cd",
+            "link": "#cd",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "pwd",
+            "slug": "pwd",
+            "link": "#pwd",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "mkdir",
+            "slug": "mkdir",
+            "link": "#mkdir",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "rmdir (删除空的目录)",
+            "slug": "rmdir-删除空的目录",
+            "link": "#rmdir-删除空的目录",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "cp",
+            "slug": "cp",
+            "link": "#cp",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "rm (移除文件或目录)",
+            "slug": "rm-移除文件或目录",
+            "link": "#rm-移除文件或目录",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "mv (移动文件与目录，或修改名称)",
+            "slug": "mv-移动文件与目录-或修改名称",
+            "link": "#mv-移动文件与目录-或修改名称",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ln",
+            "slug": "ln",
+            "link": "#ln",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "三、文件查看",
+        "slug": "三、文件查看",
+        "link": "#三、文件查看",
+        "children": [
+          {
+            "level": 3,
+            "title": "cat",
+            "slug": "cat",
+            "link": "#cat",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "less",
+            "slug": "less",
+            "link": "#less",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "head",
+            "slug": "head",
+            "link": "#head",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "tail",
+            "slug": "tail",
+            "link": "#tail",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/03.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说 linux 系统下 文本编辑常用的命令有哪些？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、使用",
+        "slug": "二、使用",
+        "link": "#二、使用",
+        "children": [
+          {
+            "level": 3,
+            "title": "命令模式",
+            "slug": "命令模式",
+            "link": "#命令模式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "输入模式",
+            "slug": "输入模式",
+            "link": "#输入模式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "底线命令模式",
+            "slug": "底线命令模式",
+            "link": "#底线命令模式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/04.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说你对 linux 用户管理的理解？相关的命令有哪些？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、用户与用户组",
+        "slug": "二、用户与用户组",
+        "link": "#二、用户与用户组",
+        "children": [
+          {
+            "level": 3,
+            "title": "文件所有者",
+            "slug": "文件所有者",
+            "link": "#文件所有者",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "用户组",
+            "slug": "用户组",
+            "link": "#用户组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "其他人",
+            "slug": "其他人",
+            "link": "#其他人",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "小结",
+            "slug": "小结",
+            "link": "#小结",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "拓展",
+            "slug": "拓展",
+            "link": "#拓展",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "三、用户操作",
+            "slug": "三、用户操作",
+            "link": "#三、用户操作",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "新增用户",
+            "slug": "新增用户",
+            "link": "#新增用户",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "设置密码",
+        "slug": "设置密码",
+        "link": "#设置密码",
+        "children": [
+          {
+            "level": 3,
+            "title": "修改用户",
+            "slug": "修改用户",
+            "link": "#修改用户",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "删除用户",
+            "slug": "删除用户",
+            "link": "#删除用户",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "新增用户组",
+            "slug": "新增用户组",
+            "link": "#新增用户组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "修改用户",
+            "slug": "修改用户-1",
+            "link": "#修改用户-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "删除用户组",
+            "slug": "删除用户组",
+            "link": "#删除用户组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "su",
+            "slug": "su",
+            "link": "#su",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "sudo",
+            "slug": "sudo",
+            "link": "#sudo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/05.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说你对输入输出重定向和管道的理解？应用场景？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、命令",
+        "slug": "二、命令",
+        "link": "#二、命令",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三、应用场景",
+        "slug": "三、应用场景",
+        "link": "#三、应用场景",
+        "children": [
+          {
+            "level": 3,
+            "title": "参考文献",
+            "slug": "参考文献",
+            "link": "#参考文献",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/06.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说你对 shell 的理解？常见的命令？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、种类",
+        "slug": "二、种类",
+        "link": "#二、种类",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三、命令",
+        "slug": "三、命令",
+        "link": "#三、命令",
+        "children": [
+          {
+            "level": 3,
+            "title": "变量",
+            "slug": "变量",
+            "link": "#变量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "条件控制",
+            "slug": "条件控制",
+            "link": "#条件控制",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "函数",
+            "slug": "函数",
+            "link": "#函数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/07.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "什么是 HTTP? HTTP 和 HTTPS 的区别?",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "一、HTTP",
+        "slug": "一、http",
+        "link": "#一、http",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、HTTPS",
+        "slug": "二、https",
+        "link": "#二、https",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三、区别",
+        "slug": "三、区别",
+        "link": "#三、区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/network/01.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "为什么说 HTTPS 比 HTTP 安全? HTTPS 是如何保证安全的？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "一、安全特性",
+        "slug": "一、安全特性",
+        "link": "#一、安全特性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、如何做",
+        "slug": "二、如何做",
+        "link": "#二、如何做",
+        "children": [
+          {
+            "level": 3,
+            "title": "对称加密",
+            "slug": "对称加密",
+            "link": "#对称加密",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "非对称加密",
+            "slug": "非对称加密",
+            "link": "#非对称加密",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "混合加密",
+            "slug": "混合加密",
+            "link": "#混合加密",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "摘要算法",
+            "slug": "摘要算法",
+            "link": "#摘要算法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "数字签名",
+            "slug": "数字签名",
+            "link": "#数字签名",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "CA 验证机构",
+            "slug": "ca-验证机构",
+            "link": "#ca-验证机构",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "三、总结",
+        "slug": "三、总结",
+        "link": "#三、总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/network/02.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说 HTTP1.0/1.1/2.0 的区别?",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "一、HTTP1.0",
+        "slug": "一、http1-0",
+        "link": "#一、http1-0",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、HTTP1.1",
+        "slug": "二、http1-1",
+        "link": "#二、http1-1",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三、HTTP2.0",
+        "slug": "三、http2-0",
+        "link": "#三、http2-0",
+        "children": [
+          {
+            "level": 3,
+            "title": "多路复用",
+            "slug": "多路复用",
+            "link": "#多路复用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "二进制分帧",
+            "slug": "二进制分帧",
+            "link": "#二进制分帧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "首部压缩",
+            "slug": "首部压缩",
+            "link": "#首部压缩",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "服务器推送",
+            "slug": "服务器推送",
+            "link": "#服务器推送",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "四、总结",
+        "slug": "四、总结",
+        "link": "#四、总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/network/03.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说地址栏输入 URL 敲下回车后发生了什么?",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "简单分析",
+        "slug": "简单分析",
+        "link": "#简单分析",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "详细分析",
+        "slug": "详细分析",
+        "link": "#详细分析",
+        "children": [
+          {
+            "level": 3,
+            "title": "URL 解析",
+            "slug": "url-解析",
+            "link": "#url-解析",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "DNS 查询",
+            "slug": "dns-查询",
+            "link": "#dns-查询",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "TCP 连接",
+            "slug": "tcp-连接",
+            "link": "#tcp-连接",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "发送 http 请求",
+            "slug": "发送-http-请求",
+            "link": "#发送-http-请求",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "响应请求",
+            "slug": "响应请求",
+            "link": "#响应请求",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "页面渲染",
+            "slug": "页面渲染",
+            "link": "#页面渲染",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/network/04.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说 HTTP 常见的状态码有哪些，适用场景？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、分类",
+        "slug": "二、分类",
+        "link": "#二、分类",
+        "children": [
+          {
+            "level": 3,
+            "title": "1xx",
+            "slug": "_1xx",
+            "link": "#_1xx",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2xx",
+            "slug": "_2xx",
+            "link": "#_2xx",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3xx",
+            "slug": "_3xx",
+            "link": "#_3xx",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4xx",
+            "slug": "_4xx",
+            "link": "#_4xx",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5xx",
+            "slug": "_5xx",
+            "link": "#_5xx",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "三、适用场景",
+        "slug": "三、适用场景",
+        "link": "#三、适用场景",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/network/05.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说一下 GET 和 POST 的区别？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、区别",
+        "slug": "二、区别",
+        "link": "#二、区别",
+        "children": [
+          {
+            "level": 3,
+            "title": "参数位置",
+            "slug": "参数位置",
+            "link": "#参数位置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "参数长度",
+            "slug": "参数长度",
+            "link": "#参数长度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "安全",
+            "slug": "安全",
+            "link": "#安全",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "数据包",
+            "slug": "数据包",
+            "link": "#数据包",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/network/06.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说 HTTP 常见的请求头有哪些? 作用？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、分类",
+        "slug": "二、分类",
+        "link": "#二、分类",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三、使用场景",
+        "slug": "三、使用场景",
+        "link": "#三、使用场景",
+        "children": [
+          {
+            "level": 3,
+            "title": "协商缓存",
+            "slug": "协商缓存",
+            "link": "#协商缓存",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "会话状态",
+            "slug": "会话状态",
+            "link": "#会话状态",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/network/07.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "三次握手和四次挥手",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": [
+          {
+            "level": 3,
+            "title": "扩展理解",
+            "slug": "扩展理解",
+            "link": "#扩展理解",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pages/interview/network/08.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Vue 项目中你是如何解决跨域的呢？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "同源策略",
+        "slug": "同源策略",
+        "link": "#同源策略",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "如何解决",
+        "slug": "如何解决",
+        "link": "#如何解决",
+        "children": [
+          {
+            "level": 3,
+            "title": "JSONP",
+            "slug": "jsonp",
+            "link": "#jsonp",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "CORS",
+            "slug": "cors",
+            "link": "#cors",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Proxy",
+            "slug": "proxy",
+            "link": "#proxy",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pages/interview/network/09.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说说对 WebSocket 的理解？应用场景？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "简版",
+        "slug": "简版",
+        "link": "#简版",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "一、是什么",
+        "slug": "一、是什么",
+        "link": "#一、是什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、特点",
+        "slug": "二、特点",
+        "link": "#二、特点",
+        "children": [
+          {
+            "level": 3,
+            "title": "全双工",
+            "slug": "全双工",
+            "link": "#全双工",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "二进制帧",
+            "slug": "二进制帧",
+            "link": "#二进制帧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "协议名",
+            "slug": "协议名",
+            "link": "#协议名",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "握手",
+            "slug": "握手",
+            "link": "#握手",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "优点",
+            "slug": "优点",
+            "link": "#优点",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "二、应用场景",
+        "slug": "二、应用场景",
+        "link": "#二、应用场景",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/network/10.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "web 常见的web攻击方式有哪些？如何防御？",
+    "headers": [
+      {
+        "level": 2,
+        "title": "web攻击",
+        "slug": "web攻击",
+        "link": "#web攻击",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "XSS(xss)攻击",
+        "slug": "xss-xss-攻击",
+        "link": "#xss-xss-攻击",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "XSS 攻击的预防",
+        "slug": "xss-攻击的预防",
+        "link": "#xss-攻击的预防",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "CSRF 攻击",
+        "slug": "csrf-攻击",
+        "link": "#csrf-攻击",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "XSS详解",
+        "slug": "xss详解",
+        "link": "#xss详解",
+        "children": [
+          {
+            "level": 3,
+            "title": "存储型",
+            "slug": "存储型",
+            "link": "#存储型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "反射型 XSS",
+            "slug": "反射型-xss",
+            "link": "#反射型-xss",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "DOM 型 XSS",
+            "slug": "dom-型-xss",
+            "link": "#dom-型-xss",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "XSS 的预防",
+            "slug": "xss-的预防",
+            "link": "#xss-的预防",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "CSRF",
+        "slug": "csrf",
+        "link": "#csrf",
+        "children": [
+          {
+            "level": 3,
+            "title": "CSRF 的特点",
+            "slug": "csrf-的特点",
+            "link": "#csrf-的特点",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "CSRF 的预防",
+            "slug": "csrf-的预防",
+            "link": "#csrf-的预防",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "SQL 注入",
+        "slug": "sql-注入",
+        "link": "#sql-注入",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      }
+    ],
+    "path": "/pages/interview/network/11.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 2,
+        "title": "项目优化",
+        "slug": "项目优化",
+        "link": "#项目优化",
+        "children": [
+          {
+            "level": 3,
+            "title": "最小化和压缩代码",
+            "slug": "最小化和压缩代码",
+            "link": "#最小化和压缩代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "利用浏览器缓存",
+            "slug": "利用浏览器缓存",
+            "link": "#利用浏览器缓存",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "避免过度使用全局变量",
+            "slug": "避免过度使用全局变量",
+            "link": "#避免过度使用全局变量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用事件委托减少事件处理器的数量",
+            "slug": "使用事件委托减少事件处理器的数量",
+            "link": "#使用事件委托减少事件处理器的数量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "async 和 defer",
+            "slug": "async-和-defer",
+            "link": "#async-和-defer",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "防抖和节流",
+            "slug": "防抖和节流",
+            "link": "#防抖和节流",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "避免长时间运行的任务",
+            "slug": "避免长时间运行的任务",
+            "link": "#避免长时间运行的任务",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "虚拟列表（Virtual List）",
+            "slug": "虚拟列表-virtual-list",
+            "link": "#虚拟列表-virtual-list",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用合适的数据结构和算法",
+            "slug": "使用合适的数据结构和算法",
+            "link": "#使用合适的数据结构和算法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "避免在for-in循环中使用hasOwnProperty",
+            "slug": "避免在for-in循环中使用hasownproperty",
+            "link": "#避免在for-in循环中使用hasownproperty",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用位操作进行整数运算",
+            "slug": "使用位操作进行整数运算",
+            "link": "#使用位操作进行整数运算",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用Web Worker进行多线程处理",
+            "slug": "使用web-worker进行多线程处理",
+            "link": "#使用web-worker进行多线程处理",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用双缓冲技术进行绘图",
+            "slug": "使用双缓冲技术进行绘图",
+            "link": "#使用双缓冲技术进行绘图",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用WebGL进行3D渲染",
+            "slug": "使用webgl进行3d渲染",
+            "link": "#使用webgl进行3d渲染",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用内容分发网络（CDN）",
+            "slug": "使用内容分发网络-cdn",
+            "link": "#使用内容分发网络-cdn",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用Web Socket进行数据通信",
+            "slug": "使用web-socket进行数据通信",
+            "link": "#使用web-socket进行数据通信",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "通过服务器端渲染（SSR）改善首次页面加载性能",
+            "slug": "通过服务器端渲染-ssr-改善首次页面加载性能",
+            "link": "#通过服务器端渲染-ssr-改善首次页面加载性能",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用Intersection Observer进行懒加载",
+            "slug": "使用intersection-observer进行懒加载",
+            "link": "#使用intersection-observer进行懒加载",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用WeakMap和WeakSet进行高效的内存管理",
+            "slug": "使用weakmap和weakset进行高效的内存管理",
+            "link": "#使用weakmap和weakset进行高效的内存管理",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用requestAnimationFrame进行动画处理",
+            "slug": "使用requestanimationframe进行动画处理",
+            "link": "#使用requestanimationframe进行动画处理",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用CSS3动画替代JavaScript动画",
+            "slug": "使用css3动画替代javascript动画",
+            "link": "#使用css3动画替代javascript动画",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "避免回流和重绘",
+            "slug": "避免回流和重绘",
+            "link": "#避免回流和重绘",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用CSS3硬件加速提高渲染性能",
+            "slug": "使用css3硬件加速提高渲染性能",
+            "link": "#使用css3硬件加速提高渲染性能",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "避免使用同步布局",
+            "slug": "避免使用同步布局",
+            "link": "#避免使用同步布局",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "vue数据使用Object.freeze",
+            "slug": "vue数据使用object-freeze",
+            "link": "#vue数据使用object-freeze",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pages/interview/network/12.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "数据类型和存储上的差别",
     "headers": [
       {
@@ -2468,1430 +3892,6 @@ export const searchIndex = [
       }
     ],
     "path": "/pages/interview/JS/27.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说你对操作系统的理解？核心概念有哪些？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、核心概念",
-        "slug": "二、核心概念",
-        "link": "#二、核心概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三、总结",
-        "slug": "三、总结",
-        "link": "#三、总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/01.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说什么是进程？什么是线程？区别？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "一、进程",
-        "slug": "一、进程",
-        "link": "#一、进程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、线程",
-        "slug": "二、线程",
-        "link": "#二、线程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三、区别",
-        "slug": "三、区别",
-        "link": "#三、区别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/02.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说 linux系统下 文件操作常用的命令有哪些？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、文件操作",
-        "slug": "二、文件操作",
-        "link": "#二、文件操作",
-        "children": [
-          {
-            "level": 3,
-            "title": "ls",
-            "slug": "ls",
-            "link": "#ls",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "cd",
-            "slug": "cd",
-            "link": "#cd",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "pwd",
-            "slug": "pwd",
-            "link": "#pwd",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "mkdir",
-            "slug": "mkdir",
-            "link": "#mkdir",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "rmdir (删除空的目录)",
-            "slug": "rmdir-删除空的目录",
-            "link": "#rmdir-删除空的目录",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "cp",
-            "slug": "cp",
-            "link": "#cp",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "rm (移除文件或目录)",
-            "slug": "rm-移除文件或目录",
-            "link": "#rm-移除文件或目录",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "mv (移动文件与目录，或修改名称)",
-            "slug": "mv-移动文件与目录-或修改名称",
-            "link": "#mv-移动文件与目录-或修改名称",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ln",
-            "slug": "ln",
-            "link": "#ln",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "三、文件查看",
-        "slug": "三、文件查看",
-        "link": "#三、文件查看",
-        "children": [
-          {
-            "level": 3,
-            "title": "cat",
-            "slug": "cat",
-            "link": "#cat",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "less",
-            "slug": "less",
-            "link": "#less",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "head",
-            "slug": "head",
-            "link": "#head",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "tail",
-            "slug": "tail",
-            "link": "#tail",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/03.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说 linux 系统下 文本编辑常用的命令有哪些？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、使用",
-        "slug": "二、使用",
-        "link": "#二、使用",
-        "children": [
-          {
-            "level": 3,
-            "title": "命令模式",
-            "slug": "命令模式",
-            "link": "#命令模式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "输入模式",
-            "slug": "输入模式",
-            "link": "#输入模式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "底线命令模式",
-            "slug": "底线命令模式",
-            "link": "#底线命令模式",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/04.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说你对 linux 用户管理的理解？相关的命令有哪些？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、用户与用户组",
-        "slug": "二、用户与用户组",
-        "link": "#二、用户与用户组",
-        "children": [
-          {
-            "level": 3,
-            "title": "文件所有者",
-            "slug": "文件所有者",
-            "link": "#文件所有者",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "用户组",
-            "slug": "用户组",
-            "link": "#用户组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "其他人",
-            "slug": "其他人",
-            "link": "#其他人",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "小结",
-            "slug": "小结",
-            "link": "#小结",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "拓展",
-            "slug": "拓展",
-            "link": "#拓展",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "三、用户操作",
-            "slug": "三、用户操作",
-            "link": "#三、用户操作",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "新增用户",
-            "slug": "新增用户",
-            "link": "#新增用户",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "设置密码",
-        "slug": "设置密码",
-        "link": "#设置密码",
-        "children": [
-          {
-            "level": 3,
-            "title": "修改用户",
-            "slug": "修改用户",
-            "link": "#修改用户",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "删除用户",
-            "slug": "删除用户",
-            "link": "#删除用户",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "新增用户组",
-            "slug": "新增用户组",
-            "link": "#新增用户组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "修改用户",
-            "slug": "修改用户-1",
-            "link": "#修改用户-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "删除用户组",
-            "slug": "删除用户组",
-            "link": "#删除用户组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "su",
-            "slug": "su",
-            "link": "#su",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "sudo",
-            "slug": "sudo",
-            "link": "#sudo",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/05.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说你对输入输出重定向和管道的理解？应用场景？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、命令",
-        "slug": "二、命令",
-        "link": "#二、命令",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三、应用场景",
-        "slug": "三、应用场景",
-        "link": "#三、应用场景",
-        "children": [
-          {
-            "level": 3,
-            "title": "参考文献",
-            "slug": "参考文献",
-            "link": "#参考文献",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/06.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说你对 shell 的理解？常见的命令？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、种类",
-        "slug": "二、种类",
-        "link": "#二、种类",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三、命令",
-        "slug": "三、命令",
-        "link": "#三、命令",
-        "children": [
-          {
-            "level": 3,
-            "title": "变量",
-            "slug": "变量",
-            "link": "#变量",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "条件控制",
-            "slug": "条件控制",
-            "link": "#条件控制",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "函数",
-            "slug": "函数",
-            "link": "#函数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/07.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "什么是 HTTP? HTTP 和 HTTPS 的区别?",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "一、HTTP",
-        "slug": "一、http",
-        "link": "#一、http",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、HTTPS",
-        "slug": "二、https",
-        "link": "#二、https",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三、区别",
-        "slug": "三、区别",
-        "link": "#三、区别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/network/01.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "为什么说 HTTPS 比 HTTP 安全? HTTPS 是如何保证安全的？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "一、安全特性",
-        "slug": "一、安全特性",
-        "link": "#一、安全特性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、如何做",
-        "slug": "二、如何做",
-        "link": "#二、如何做",
-        "children": [
-          {
-            "level": 3,
-            "title": "对称加密",
-            "slug": "对称加密",
-            "link": "#对称加密",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "非对称加密",
-            "slug": "非对称加密",
-            "link": "#非对称加密",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "混合加密",
-            "slug": "混合加密",
-            "link": "#混合加密",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "摘要算法",
-            "slug": "摘要算法",
-            "link": "#摘要算法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "数字签名",
-            "slug": "数字签名",
-            "link": "#数字签名",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "CA 验证机构",
-            "slug": "ca-验证机构",
-            "link": "#ca-验证机构",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "三、总结",
-        "slug": "三、总结",
-        "link": "#三、总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/network/02.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说 HTTP1.0/1.1/2.0 的区别?",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "一、HTTP1.0",
-        "slug": "一、http1-0",
-        "link": "#一、http1-0",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、HTTP1.1",
-        "slug": "二、http1-1",
-        "link": "#二、http1-1",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三、HTTP2.0",
-        "slug": "三、http2-0",
-        "link": "#三、http2-0",
-        "children": [
-          {
-            "level": 3,
-            "title": "多路复用",
-            "slug": "多路复用",
-            "link": "#多路复用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "二进制分帧",
-            "slug": "二进制分帧",
-            "link": "#二进制分帧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "首部压缩",
-            "slug": "首部压缩",
-            "link": "#首部压缩",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "服务器推送",
-            "slug": "服务器推送",
-            "link": "#服务器推送",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "四、总结",
-        "slug": "四、总结",
-        "link": "#四、总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/network/03.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说地址栏输入 URL 敲下回车后发生了什么?",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "简单分析",
-        "slug": "简单分析",
-        "link": "#简单分析",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "详细分析",
-        "slug": "详细分析",
-        "link": "#详细分析",
-        "children": [
-          {
-            "level": 3,
-            "title": "URL 解析",
-            "slug": "url-解析",
-            "link": "#url-解析",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "DNS 查询",
-            "slug": "dns-查询",
-            "link": "#dns-查询",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "TCP 连接",
-            "slug": "tcp-连接",
-            "link": "#tcp-连接",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "发送 http 请求",
-            "slug": "发送-http-请求",
-            "link": "#发送-http-请求",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "响应请求",
-            "slug": "响应请求",
-            "link": "#响应请求",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "页面渲染",
-            "slug": "页面渲染",
-            "link": "#页面渲染",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/network/04.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说 HTTP 常见的状态码有哪些，适用场景？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、分类",
-        "slug": "二、分类",
-        "link": "#二、分类",
-        "children": [
-          {
-            "level": 3,
-            "title": "1xx",
-            "slug": "_1xx",
-            "link": "#_1xx",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2xx",
-            "slug": "_2xx",
-            "link": "#_2xx",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3xx",
-            "slug": "_3xx",
-            "link": "#_3xx",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4xx",
-            "slug": "_4xx",
-            "link": "#_4xx",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5xx",
-            "slug": "_5xx",
-            "link": "#_5xx",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "三、适用场景",
-        "slug": "三、适用场景",
-        "link": "#三、适用场景",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/network/05.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说一下 GET 和 POST 的区别？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、区别",
-        "slug": "二、区别",
-        "link": "#二、区别",
-        "children": [
-          {
-            "level": 3,
-            "title": "参数位置",
-            "slug": "参数位置",
-            "link": "#参数位置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "参数长度",
-            "slug": "参数长度",
-            "link": "#参数长度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "安全",
-            "slug": "安全",
-            "link": "#安全",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "数据包",
-            "slug": "数据包",
-            "link": "#数据包",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/network/06.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说 HTTP 常见的请求头有哪些? 作用？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、分类",
-        "slug": "二、分类",
-        "link": "#二、分类",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三、使用场景",
-        "slug": "三、使用场景",
-        "link": "#三、使用场景",
-        "children": [
-          {
-            "level": 3,
-            "title": "协商缓存",
-            "slug": "协商缓存",
-            "link": "#协商缓存",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "会话状态",
-            "slug": "会话状态",
-            "link": "#会话状态",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/network/07.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "三次握手和四次挥手",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": [
-          {
-            "level": 3,
-            "title": "扩展理解",
-            "slug": "扩展理解",
-            "link": "#扩展理解",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pages/interview/network/08.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Vue 项目中你是如何解决跨域的呢？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "同源策略",
-        "slug": "同源策略",
-        "link": "#同源策略",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "如何解决",
-        "slug": "如何解决",
-        "link": "#如何解决",
-        "children": [
-          {
-            "level": 3,
-            "title": "JSONP",
-            "slug": "jsonp",
-            "link": "#jsonp",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "CORS",
-            "slug": "cors",
-            "link": "#cors",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Proxy",
-            "slug": "proxy",
-            "link": "#proxy",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pages/interview/network/09.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "说说对 WebSocket 的理解？应用场景？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "简版",
-        "slug": "简版",
-        "link": "#简版",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "一、是什么",
-        "slug": "一、是什么",
-        "link": "#一、是什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、特点",
-        "slug": "二、特点",
-        "link": "#二、特点",
-        "children": [
-          {
-            "level": 3,
-            "title": "全双工",
-            "slug": "全双工",
-            "link": "#全双工",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "二进制帧",
-            "slug": "二进制帧",
-            "link": "#二进制帧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "协议名",
-            "slug": "协议名",
-            "link": "#协议名",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "握手",
-            "slug": "握手",
-            "link": "#握手",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "优点",
-            "slug": "优点",
-            "link": "#优点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "二、应用场景",
-        "slug": "二、应用场景",
-        "link": "#二、应用场景",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/network/10.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "web 常见的web攻击方式有哪些？如何防御？",
-    "headers": [
-      {
-        "level": 2,
-        "title": "web攻击",
-        "slug": "web攻击",
-        "link": "#web攻击",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "XSS(xss)攻击",
-        "slug": "xss-xss-攻击",
-        "link": "#xss-xss-攻击",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "XSS 攻击的预防",
-        "slug": "xss-攻击的预防",
-        "link": "#xss-攻击的预防",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "CSRF 攻击",
-        "slug": "csrf-攻击",
-        "link": "#csrf-攻击",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "XSS详解",
-        "slug": "xss详解",
-        "link": "#xss详解",
-        "children": [
-          {
-            "level": 3,
-            "title": "存储型",
-            "slug": "存储型",
-            "link": "#存储型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反射型 XSS",
-            "slug": "反射型-xss",
-            "link": "#反射型-xss",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "DOM 型 XSS",
-            "slug": "dom-型-xss",
-            "link": "#dom-型-xss",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "XSS 的预防",
-            "slug": "xss-的预防",
-            "link": "#xss-的预防",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "CSRF",
-        "slug": "csrf",
-        "link": "#csrf",
-        "children": [
-          {
-            "level": 3,
-            "title": "CSRF 的特点",
-            "slug": "csrf-的特点",
-            "link": "#csrf-的特点",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "CSRF 的预防",
-            "slug": "csrf-的预防",
-            "link": "#csrf-的预防",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "SQL 注入",
-        "slug": "sql-注入",
-        "link": "#sql-注入",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/pages/interview/network/11.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 2,
-        "title": "项目优化",
-        "slug": "项目优化",
-        "link": "#项目优化",
-        "children": [
-          {
-            "level": 3,
-            "title": "最小化和压缩代码",
-            "slug": "最小化和压缩代码",
-            "link": "#最小化和压缩代码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "利用浏览器缓存",
-            "slug": "利用浏览器缓存",
-            "link": "#利用浏览器缓存",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "避免过度使用全局变量",
-            "slug": "避免过度使用全局变量",
-            "link": "#避免过度使用全局变量",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用事件委托减少事件处理器的数量",
-            "slug": "使用事件委托减少事件处理器的数量",
-            "link": "#使用事件委托减少事件处理器的数量",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "async 和 defer",
-            "slug": "async-和-defer",
-            "link": "#async-和-defer",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "防抖和节流",
-            "slug": "防抖和节流",
-            "link": "#防抖和节流",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "避免长时间运行的任务",
-            "slug": "避免长时间运行的任务",
-            "link": "#避免长时间运行的任务",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "虚拟列表（Virtual List）",
-            "slug": "虚拟列表-virtual-list",
-            "link": "#虚拟列表-virtual-list",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用合适的数据结构和算法",
-            "slug": "使用合适的数据结构和算法",
-            "link": "#使用合适的数据结构和算法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "避免在for-in循环中使用hasOwnProperty",
-            "slug": "避免在for-in循环中使用hasownproperty",
-            "link": "#避免在for-in循环中使用hasownproperty",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用位操作进行整数运算",
-            "slug": "使用位操作进行整数运算",
-            "link": "#使用位操作进行整数运算",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用Web Worker进行多线程处理",
-            "slug": "使用web-worker进行多线程处理",
-            "link": "#使用web-worker进行多线程处理",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用双缓冲技术进行绘图",
-            "slug": "使用双缓冲技术进行绘图",
-            "link": "#使用双缓冲技术进行绘图",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用WebGL进行3D渲染",
-            "slug": "使用webgl进行3d渲染",
-            "link": "#使用webgl进行3d渲染",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用内容分发网络（CDN）",
-            "slug": "使用内容分发网络-cdn",
-            "link": "#使用内容分发网络-cdn",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用Web Socket进行数据通信",
-            "slug": "使用web-socket进行数据通信",
-            "link": "#使用web-socket进行数据通信",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "通过服务器端渲染（SSR）改善首次页面加载性能",
-            "slug": "通过服务器端渲染-ssr-改善首次页面加载性能",
-            "link": "#通过服务器端渲染-ssr-改善首次页面加载性能",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用Intersection Observer进行懒加载",
-            "slug": "使用intersection-observer进行懒加载",
-            "link": "#使用intersection-observer进行懒加载",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用WeakMap和WeakSet进行高效的内存管理",
-            "slug": "使用weakmap和weakset进行高效的内存管理",
-            "link": "#使用weakmap和weakset进行高效的内存管理",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用requestAnimationFrame进行动画处理",
-            "slug": "使用requestanimationframe进行动画处理",
-            "link": "#使用requestanimationframe进行动画处理",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用CSS3动画替代JavaScript动画",
-            "slug": "使用css3动画替代javascript动画",
-            "link": "#使用css3动画替代javascript动画",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "避免回流和重绘",
-            "slug": "避免回流和重绘",
-            "link": "#避免回流和重绘",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用CSS3硬件加速提高渲染性能",
-            "slug": "使用css3硬件加速提高渲染性能",
-            "link": "#使用css3硬件加速提高渲染性能",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "避免使用同步布局",
-            "slug": "避免使用同步布局",
-            "link": "#避免使用同步布局",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "vue数据使用Object.freeze",
-            "slug": "vue数据使用object-freeze",
-            "link": "#vue数据使用object-freeze",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pages/interview/network/12.html",
     "pathLocale": "/",
     "extraFields": []
   },

@@ -52,14 +52,14 @@
 <h3 id="getsnapshotbeforeupdate" tabindex="-1"><a class="header-anchor" href="#getsnapshotbeforeupdate" aria-hidden="true">#</a> getSnapshotBeforeUpdate</h3>
 <p>该周期函数在<code v-pre>render</code>后执行，执行之时<code v-pre>DOM</code>元素还没有被更新</p>
 <p>该方法返回的一个<code v-pre>Snapshot</code>值，作为<code v-pre>componentDidUpdate</code>第三个参数传入</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log('#enter getSnapshotBeforeUpdate');
-    return 'foo';
-}
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token function">getSnapshotBeforeUpdate</span><span class="token punctuation">(</span><span class="token parameter">prevProps<span class="token punctuation">,</span> prevState</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'#enter getSnapshotBeforeUpdate'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token string">'foo'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log('#enter componentDidUpdate snapshot = ', snapshot);
-}
+<span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token parameter">prevProps<span class="token punctuation">,</span> prevState<span class="token punctuation">,</span> snapshot</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'#enter componentDidUpdate snapshot = '</span><span class="token punctuation">,</span> snapshot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此方法的目的在于获取组件更新前的一些信息，比如组件的滚动位置之类的，在组件更新后可以根据这些信息恢复一些UI视觉上的状态</p>
 <h3 id="componentdidupdate" tabindex="-1"><a class="header-anchor" href="#componentdidupdate" aria-hidden="true">#</a> componentDidUpdate</h3>
 <p>执行时机：组件更新结束后触发</p>

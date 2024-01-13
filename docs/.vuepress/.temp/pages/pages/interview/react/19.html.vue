@@ -22,178 +22,97 @@
 <p>转换为代码是，<code v-pre>React Components</code> 需要获取一些数据, 然后它就告知 <code v-pre>Store</code> 需要获取数据，这就是就是 <code v-pre>Action Creactor</code> , <code v-pre>Store</code> 接收到之后去 <code v-pre>Reducer</code> 查一下， <code v-pre>Reducer</code> 会告诉 <code v-pre>Store</code> 应该给这个组件什么数据</p>
 <h2 id="三、如何使用" tabindex="-1"><a class="header-anchor" href="#三、如何使用" aria-hidden="true">#</a> 三、如何使用</h2>
 <p>创建一个<code v-pre>store</code>的公共数据区域</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>import { createStore } from 'redux' // 引入一个第三方的方法
-const store = createStore() // 创建数据的公共存储区域（管理员）
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>1<br>
-2</p>
-<p>还需要创建一个记录本去辅助管理数据，也就是<code v-pre>reduecer</code>，本质就是一个函数，接收两个参数<code v-pre>state</code>，<code v-pre>action</code>，返回<code v-pre>state</code></p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>// 设置默认值
-const initialState = {
-  counter: 0
-}
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'redux'</span> <span class="token comment">// 引入一个第三方的方法</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 创建数据的公共存储区域（管理员）</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>还需要创建一个记录本去辅助管理数据，也就是<code v-pre>reduecer</code>，本质就是一个函数，接收两个参数<code v-pre>state</code>，<code v-pre>action</code>，返回<code v-pre>state</code></p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// 设置默认值</span>
+<span class="token keyword">const</span> initialState <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">counter</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
 
-const reducer = (state = initialState, action) => {
-}
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1<br>
-2<br>
-3<br>
-4<br>
-5<br>
-6<br>
-7</p>
-<p>然后就可以将记录本传递给<code v-pre>store</code>，两者建立连接。如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>const store = createStore(reducer)
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>1</p>
-<p>如果想要获取<code v-pre>store</code>里面的数据，则通过<code v-pre>store.getState()</code>来获取当前<code v-pre>state</code></p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>console.log(store.getState());
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>1</p>
-<p>下面再看看如何更改<code v-pre>store</code>里面数据，是通过<code v-pre>dispatch</code>来派发<code v-pre>action</code>，通常<code v-pre>action</code>中都会有<code v-pre>type</code>属性，也可以携带其他的数据</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>store.dispatch({
-  type: "INCREMENT"
-})
+<span class="token keyword">const</span> <span class="token function-variable function">reducer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> initialState<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后就可以将记录本传递给<code v-pre>store</code>，两者建立连接。如下：</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>reducer<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果想要获取<code v-pre>store</code>里面的数据，则通过<code v-pre>store.getState()</code>来获取当前<code v-pre>state</code></p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>下面再看看如何更改<code v-pre>store</code>里面数据，是通过<code v-pre>dispatch</code>来派发<code v-pre>action</code>，通常<code v-pre>action</code>中都会有<code v-pre>type</code>属性，也可以携带其他的数据</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code>store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"INCREMENT"</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-store.dispath({
-  type: "DECREMENT"
-})
+store<span class="token punctuation">.</span><span class="token function">dispath</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"DECREMENT"</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-store.dispatch({
-  type: "ADD_NUMBER",
-  number: 5
-})
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1<br>
-2<br>
-3<br>
-4<br>
-5<br>
-6<br>
-7<br>
-8<br>
-9<br>
-10<br>
-11<br>
-12</p>
-<p>下面再来看看修改<code v-pre>reducer</code>中的处理逻辑：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "INCREMENT":
-      return {...state, counter: state.counter + 1};
-    case "DECREMENT":
-      return {...state, counter: state.counter - 1};
-    case "ADD_NUMBER":
-      return {...state, counter: state.counter + action.number}
-    default: 
-      return state;
-  }
-}
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1<br>
-2<br>
-3<br>
-4<br>
-5<br>
-6<br>
-7<br>
-8<br>
-9<br>
-10<br>
-11<br>
-12</p>
-<p>注意，<code v-pre>reducer</code>是一个纯函数，不需要直接修改<code v-pre>state</code></p>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"ADD_NUMBER"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">number</span><span class="token operator">:</span> <span class="token number">5</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>下面再来看看修改<code v-pre>reducer</code>中的处理逻辑：</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token function-variable function">reducer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> initialState<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">"INCREMENT"</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> <span class="token literal-property property">counter</span><span class="token operator">:</span> state<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token string">"DECREMENT"</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> <span class="token literal-property property">counter</span><span class="token operator">:</span> state<span class="token punctuation">.</span>counter <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token string">"ADD_NUMBER"</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> <span class="token literal-property property">counter</span><span class="token operator">:</span> state<span class="token punctuation">.</span>counter <span class="token operator">+</span> action<span class="token punctuation">.</span>number<span class="token punctuation">}</span>
+    <span class="token keyword">default</span><span class="token operator">:</span> 
+      <span class="token keyword">return</span> state<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注意，<code v-pre>reducer</code>是一个纯函数，不需要直接修改<code v-pre>state</code></p>
 <p>这样派发<code v-pre>action</code>之后，既可以通过<code v-pre>store.subscribe</code>监听<code v-pre>store</code>的变化，如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>store.subscribe(() => {
-  console.log(store.getState());
-})
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1<br>
-2<br>
-3</p>
-<p>在<code v-pre>React</code>项目中，会搭配<code v-pre>react-redux</code>进行使用</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code>store<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在<code v-pre>React</code>项目中，会搭配<code v-pre>react-redux</code>进行使用</p>
 <p>完整代码如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>const redux = require('redux');
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> redux <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'redux'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-const initialState = {
-  counter: 0
-}
+<span class="token keyword">const</span> initialState <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">counter</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
 
-// 创建reducer
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "INCREMENT":
-      return {...state, counter: state.counter + 1};
-    case "DECREMENT":
-      return {...state, counter: state.counter - 1};
-    case "ADD_NUMBER":
-      return {...state, counter: state.counter + action.number}
-    default: 
-      return state;
-  }
-}
+<span class="token comment">// 创建reducer</span>
+<span class="token keyword">const</span> <span class="token function-variable function">reducer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> initialState<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">"INCREMENT"</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> <span class="token literal-property property">counter</span><span class="token operator">:</span> state<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token string">"DECREMENT"</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> <span class="token literal-property property">counter</span><span class="token operator">:</span> state<span class="token punctuation">.</span>counter <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token string">"ADD_NUMBER"</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>state<span class="token punctuation">,</span> <span class="token literal-property property">counter</span><span class="token operator">:</span> state<span class="token punctuation">.</span>counter <span class="token operator">+</span> action<span class="token punctuation">.</span>number<span class="token punctuation">}</span>
+    <span class="token keyword">default</span><span class="token operator">:</span> 
+      <span class="token keyword">return</span> state<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-// 根据reducer创建store
-const store = redux.createStore(reducer);
+<span class="token comment">// 根据reducer创建store</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> redux<span class="token punctuation">.</span><span class="token function">createStore</span><span class="token punctuation">(</span>reducer<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-store.subscribe(() => {
-  console.log(store.getState());
-})
+store<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-// 修改store中的state
-store.dispatch({
-  type: "INCREMENT"
-})
-// console.log(store.getState());
+<span class="token comment">// 修改store中的state</span>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"INCREMENT"</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// console.log(store.getState());</span>
 
-store.dispatch({
-  type: "DECREMENT"
-})
-// console.log(store.getState());
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"DECREMENT"</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// console.log(store.getState());</span>
 
-store.dispatch({
-  type: "ADD_NUMBER",
-  number: 5
-})
-// console.log(store.getState());
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1<br>
-2<br>
-3<br>
-4<br>
-5<br>
-6<br>
-7<br>
-8<br>
-9<br>
-10<br>
-11<br>
-12<br>
-13<br>
-14<br>
-15<br>
-16<br>
-17<br>
-18<br>
-19<br>
-20<br>
-21<br>
-22<br>
-23<br>
-24<br>
-25<br>
-26<br>
-27<br>
-28<br>
-29<br>
-30<br>
-31<br>
-32<br>
-33<br>
-34<br>
-35<br>
-36<br>
-37<br>
-38<br>
-39<br>
-40<br>
-41<br>
-42<br>
-43</p>
-<h3 id="小结" tabindex="-1"><a class="header-anchor" href="#小结" aria-hidden="true">#</a> 小结</h3>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"ADD_NUMBER"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">number</span><span class="token operator">:</span> <span class="token number">5</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// console.log(store.getState());</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="小结" tabindex="-1"><a class="header-anchor" href="#小结" aria-hidden="true">#</a> 小结</h3>
 <ul>
 <li>createStore可以帮助创建 store</li>
 <li>store.dispatch 帮助派发 action , action 会传递给 store</li>

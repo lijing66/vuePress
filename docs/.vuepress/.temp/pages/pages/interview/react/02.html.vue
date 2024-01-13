@@ -13,16 +13,16 @@
 <p><code v-pre>Virtual Dom</code>，本质上是以 <code v-pre>JavaScript</code> 对象形式存在的对 <code v-pre>DOM</code> 的描述</p>
 <p>创建虚拟<code v-pre>DOM</code>目的就是为了更好将虚拟的节点渲染到页面视图中，虚拟<code v-pre>DOM</code>对象的节点与真实<code v-pre>DOM</code>的属性一一照应</p>
 <p>在<code v-pre>React</code>中，<code v-pre>JSX</code>是其一大特性，可以让你在<code v-pre>JS</code>中通过使用<code v-pre>XML</code>的方式去直接声明界面的<code v-pre>DOM</code>结构</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>const vDom = &lt;h1>Hello World&lt;/h1> // 创建h1标签，右边千万不能加引号
-const root = document.getElementById('root') // 找到&lt;div id="root">&lt;/div>节点
-ReactDOM.render(vDom, root) // 把创建的h1标签渲染到root节点上
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> vDom <span class="token operator">=</span> <span class="token operator">&lt;</span>h1<span class="token operator">></span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span> <span class="token comment">// 创建h1标签，右边千万不能加引号</span>
+<span class="token keyword">const</span> root <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span> <span class="token comment">// 找到&lt;div id="root">&lt;/div>节点</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>vDom<span class="token punctuation">,</span> root<span class="token punctuation">)</span> <span class="token comment">// 把创建的h1标签渲染到root节点上</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上述中，<code v-pre>ReactDOM.render()</code>用于将你创建好的虚拟<code v-pre>DOM</code>节点插入到某个真实节点上，并渲染到页面上</p>
 <p><code v-pre>JSX</code>实际是一种语法糖，在使用过程中会被<code v-pre>babel</code>进行编译转化成<code v-pre>JS</code>代码，上述<code v-pre>VDOM</code>转化为如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>const vDom = React.createElement(
-  'h1'， 
-  { className: 'hClass', id: 'hId' },
-  'hello world'
-)
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> vDom <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>
+  <span class="token string">'h1'</span>， 
+  <span class="token punctuation">{</span> <span class="token literal-property property">className</span><span class="token operator">:</span> <span class="token string">'hClass'</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'hId'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'hello world'</span>
+<span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以看到，<code v-pre>JSX</code>就是为了简化直接调用<code v-pre>React.createElement()</code> 方法：</p>
 <ul>
 <li>

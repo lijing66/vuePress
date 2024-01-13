@@ -2,42 +2,42 @@
 <p><img src="https://static.vue-js.com/618abaf0-d71c-11eb-85f6-6fac77c0c9b3.png" alt=""></p>
 <h2 id="一、es6类" tabindex="-1"><a class="header-anchor" href="#一、es6类" aria-hidden="true">#</a> 一、ES6类</h2>
 <p>在<code v-pre>ES6</code>中，通过<code v-pre>extends</code>关键字实现类的继承，方式如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>class sup {
-    constructor(name) {
-        this.name = name
-    }
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">sup</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token punctuation">}</span>
 
-    printName() {
-        console.log(this.name)
-    }
-}
+    <span class="token function">printName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
 
-class sub extends sup{
-    constructor(name,age) {
-        super(name) // super代表的事父类的构造函数
-        this.age = age
-    }
+<span class="token keyword">class</span> <span class="token class-name">sub</span> <span class="token keyword">extends</span> <span class="token class-name">sup</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// super代表的事父类的构造函数</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+    <span class="token punctuation">}</span>
 
-    printAge() {
-        console.log(this.age)
-    }
-}
+    <span class="token function">printAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-let jack = new sub('jack',20)
-jack.printName()    //输出 : jack
-jack.printAge()    //输出 : 20
+<span class="token keyword">let</span> jack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">sub</span><span class="token punctuation">(</span><span class="token string">'jack'</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">)</span>
+jack<span class="token punctuation">.</span><span class="token function">printName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment">//输出 : jack</span>
+jack<span class="token punctuation">.</span><span class="token function">printAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment">//输出 : 20</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在上面的例子中，可以看到通过<code v-pre>super</code>关键字实现调用父类，<code v-pre>super</code>代替的是父类的构建函数，使用<code v-pre>super(name)</code>相当于调用<code v-pre>sup.prototype.constructor.call(this,name)</code></p>
 <p>如果在子类中不使用<code v-pre>super</code>，关键字，则会引发报错，如下：<img src="https://static.vue-js.com/6ab40190-d71c-11eb-85f6-6fac77c0c9b3.png" alt=""></p>
 <p>报错的原因是 子类是没有自己的<code v-pre>this</code>对象的，它只能继承父类的<code v-pre>this</code>对象，然后对其进行加工</p>
 <p>而<code v-pre>super()</code>就是将父类中的<code v-pre>this</code>对象继承给子类的，没有<code v-pre>super()</code>子类就得不到<code v-pre>this</code>对象</p>
 <p>如果先调用<code v-pre>this</code>，再初始化<code v-pre>super()</code>，同样是禁止的行为</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>class sub extends sup{
-    constructor(name,age) {
-        this.age = age
-        super(name) // super代表的事父类的构造函数
-    }
-}
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">sub</span> <span class="token keyword">extends</span> <span class="token class-name">sup</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+        <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// super代表的事父类的构造函数</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>所以在子类<code v-pre>constructor</code>中，必须先代用<code v-pre>super</code>才能引用<code v-pre>this</code></p>
 <h2 id="二、类组件" tabindex="-1"><a class="header-anchor" href="#二、类组件" aria-hidden="true">#</a> 二、类组件</h2>
 <p>在<code v-pre>React</code>中，类组件是基于<code v-pre>es6</code>的规范实现的，继承<code v-pre>React.Component</code>，因此如果用到<code v-pre>constructor</code>就必须写<code v-pre>super()</code>才初始化<code v-pre>this</code></p>

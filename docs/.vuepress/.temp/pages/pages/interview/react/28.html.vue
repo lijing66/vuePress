@@ -17,66 +17,66 @@
 <p>从架构角度来看，<code v-pre>Fiber</code> 是对 <code v-pre>React</code>核心算法（即调和过程）的重写</p>
 <p>从编码角度来看，<code v-pre>Fiber</code>是 <code v-pre>React</code>内部所定义的一种数据结构，它是 <code v-pre>Fiber</code>树结构的节点单位，也就是 <code v-pre>React 16</code> 新架构下的虚拟<code v-pre>DOM</code></p>
 <p>一个 <code v-pre>fiber</code>就是一个 <code v-pre>JavaScript</code>对象，包含了元素的信息、该元素的更新操作队列、类型，其数据结构如下：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>type Fiber = {
-  // 用于标记fiber的WorkTag类型，主要表示当前fiber代表的组件类型如FunctionComponent、ClassComponent等
-  tag: WorkTag,
-  // ReactElement里面的key
-  key: null | string,
-  // ReactElement.type，调用`createElement`的第一个参数
-  elementType: any,
-  // The resolved function/class/ associated with this fiber.
-  // 表示当前代表的节点类型
-  type: any,
-  // 表示当前FiberNode对应的element组件实例
-  stateNode: any,
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code>type Fiber <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 用于标记fiber的WorkTag类型，主要表示当前fiber代表的组件类型如FunctionComponent、ClassComponent等</span>
+  <span class="token literal-property property">tag</span><span class="token operator">:</span> WorkTag<span class="token punctuation">,</span>
+  <span class="token comment">// ReactElement里面的key</span>
+  <span class="token literal-property property">key</span><span class="token operator">:</span> <span class="token keyword">null</span> <span class="token operator">|</span> string<span class="token punctuation">,</span>
+  <span class="token comment">// ReactElement.type，调用`createElement`的第一个参数</span>
+  <span class="token literal-property property">elementType</span><span class="token operator">:</span> any<span class="token punctuation">,</span>
+  <span class="token comment">// The resolved function/class/ associated with this fiber.</span>
+  <span class="token comment">// 表示当前代表的节点类型</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> any<span class="token punctuation">,</span>
+  <span class="token comment">// 表示当前FiberNode对应的element组件实例</span>
+  <span class="token literal-property property">stateNode</span><span class="token operator">:</span> any<span class="token punctuation">,</span>
 
-  // 指向他在Fiber节点树中的`parent`，用来在处理完这个节点之后向上返回
-  return: Fiber | null,
-  // 指向自己的第一个子节点
-  child: Fiber | null,
-  // 指向自己的兄弟结构，兄弟节点的return指向同一个父节点
-  sibling: Fiber | null,
-  index: number,
+  <span class="token comment">// 指向他在Fiber节点树中的`parent`，用来在处理完这个节点之后向上返回</span>
+  <span class="token keyword">return</span><span class="token operator">:</span> Fiber <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token comment">// 指向自己的第一个子节点</span>
+  <span class="token literal-property property">child</span><span class="token operator">:</span> Fiber <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token comment">// 指向自己的兄弟结构，兄弟节点的return指向同一个父节点</span>
+  <span class="token literal-property property">sibling</span><span class="token operator">:</span> Fiber <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">index</span><span class="token operator">:</span> number<span class="token punctuation">,</span>
 
-  ref: null | (((handle: mixed) => void) &amp; { _stringRef: ?string }) | RefObject,
+  <span class="token literal-property property">ref</span><span class="token operator">:</span> <span class="token keyword">null</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">handle</span><span class="token operator">:</span> mixed</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token punctuation">{</span> <span class="token literal-property property">_stringRef</span><span class="token operator">:</span> <span class="token operator">?</span>string <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">|</span> RefObject<span class="token punctuation">,</span>
 
-  // 当前处理过程中的组件props对象
-  pendingProps: any,
-  // 上一次渲染完成之后的props
-  memoizedProps: any,
+  <span class="token comment">// 当前处理过程中的组件props对象</span>
+  <span class="token literal-property property">pendingProps</span><span class="token operator">:</span> any<span class="token punctuation">,</span>
+  <span class="token comment">// 上一次渲染完成之后的props</span>
+  <span class="token literal-property property">memoizedProps</span><span class="token operator">:</span> any<span class="token punctuation">,</span>
 
-  // 该Fiber对应的组件产生的Update会存放在这个队列里面
-  updateQueue: UpdateQueue&lt;any> | null,
+  <span class="token comment">// 该Fiber对应的组件产生的Update会存放在这个队列里面</span>
+  <span class="token literal-property property">updateQueue</span><span class="token operator">:</span> UpdateQueue<span class="token operator">&lt;</span>any<span class="token operator">></span> <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
 
-  // 上一次渲染的时候的state
-  memoizedState: any,
+  <span class="token comment">// 上一次渲染的时候的state</span>
+  <span class="token literal-property property">memoizedState</span><span class="token operator">:</span> any<span class="token punctuation">,</span>
 
-  // 一个列表，存放这个Fiber依赖的context
-  firstContextDependency: ContextDependency&lt;mixed> | null,
+  <span class="token comment">// 一个列表，存放这个Fiber依赖的context</span>
+  <span class="token literal-property property">firstContextDependency</span><span class="token operator">:</span> ContextDependency<span class="token operator">&lt;</span>mixed<span class="token operator">></span> <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
 
-  mode: TypeOfMode,
+  <span class="token literal-property property">mode</span><span class="token operator">:</span> TypeOfMode<span class="token punctuation">,</span>
 
-  // Effect
-  // 用来记录Side Effect
-  effectTag: SideEffectTag,
+  <span class="token comment">// Effect</span>
+  <span class="token comment">// 用来记录Side Effect</span>
+  <span class="token literal-property property">effectTag</span><span class="token operator">:</span> SideEffectTag<span class="token punctuation">,</span>
 
-  // 单链表用来快速查找下一个side effect
-  nextEffect: Fiber | null,
+  <span class="token comment">// 单链表用来快速查找下一个side effect</span>
+  <span class="token literal-property property">nextEffect</span><span class="token operator">:</span> Fiber <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
 
-  // 子树中第一个side effect
-  firstEffect: Fiber | null,
-  // 子树中最后一个side effect
-  lastEffect: Fiber | null,
+  <span class="token comment">// 子树中第一个side effect</span>
+  <span class="token literal-property property">firstEffect</span><span class="token operator">:</span> Fiber <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token comment">// 子树中最后一个side effect</span>
+  <span class="token literal-property property">lastEffect</span><span class="token operator">:</span> Fiber <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
 
-  // 代表任务在未来的哪个时间点应该被完成，之后版本改名为 lanes
-  expirationTime: ExpirationTime,
+  <span class="token comment">// 代表任务在未来的哪个时间点应该被完成，之后版本改名为 lanes</span>
+  <span class="token literal-property property">expirationTime</span><span class="token operator">:</span> ExpirationTime<span class="token punctuation">,</span>
 
-  // 快速确定子树中是否有不在等待的变化
-  childExpirationTime: ExpirationTime,
+  <span class="token comment">// 快速确定子树中是否有不在等待的变化</span>
+  <span class="token literal-property property">childExpirationTime</span><span class="token operator">:</span> ExpirationTime<span class="token punctuation">,</span>
 
-  // fiber的版本池，即记录fiber更新过程，便于恢复
-  alternate: Fiber | null,
-}
+  <span class="token comment">// fiber的版本池，即记录fiber更新过程，便于恢复</span>
+  <span class="token literal-property property">alternate</span><span class="token operator">:</span> Fiber <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="三、如何解决" tabindex="-1"><a class="header-anchor" href="#三、如何解决" aria-hidden="true">#</a> 三、如何解决</h2>
 <p><code v-pre>Fiber</code>把渲染更新过程拆分成多个子任务，每次只做一小部分，做完看是否还有剩余时间，如果有继续下一个任务；如果没有，挂起当前任务，将时间控制权交给主线程，等主线程不忙的时候在继续执行</p>
 <p>即可以中断与恢复，恢复后也可以复用之前的中间状态，并给不同的任务赋予不同的优先级，其中每个任务更新单元为 <code v-pre>React Element</code> 对应的 <code v-pre>Fiber</code>节点</p>
@@ -86,12 +86,12 @@
 <p>该实现过程是基于 <code v-pre>Fiber</code>节点实现，作为静态的数据结构来说，每个 <code v-pre>Fiber</code> 节点对应一个 <code v-pre>React element</code>，保存了该组件的类型（函数组件/类组件/原生组件等等）、对应的 DOM 节点等信息。</p>
 <p>作为动态的工作单元来说，每个 <code v-pre>Fiber</code> 节点保存了本次更新中该组件改变的状态、要执行的工作。</p>
 <p>每个 Fiber 节点有个对应的 <code v-pre>React element</code>，多个 <code v-pre>Fiber</code>节点根据如下三个属性构建一颗树：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>// 指向父级Fiber节点
-this.return = null
-// 指向子Fiber节点
-this.child = null
-// 指向右边第一个兄弟Fiber节点
-this.sibling = null
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// 指向父级Fiber节点</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>return <span class="token operator">=</span> <span class="token keyword">null</span>
+<span class="token comment">// 指向子Fiber节点</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>child <span class="token operator">=</span> <span class="token keyword">null</span>
+<span class="token comment">// 指向右边第一个兄弟Fiber节点</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>sibling <span class="token operator">=</span> <span class="token keyword">null</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过这些属性就能找到下一个执行目标</p>
 <h2 id="参考文献" tabindex="-1"><a class="header-anchor" href="#参考文献" aria-hidden="true">#</a> 参考文献</h2>
 <ul>
