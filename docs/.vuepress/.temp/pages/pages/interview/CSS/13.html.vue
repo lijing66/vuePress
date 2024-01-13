@@ -5,7 +5,7 @@
  * @LastEditTime: 2023-12-12 22:13:51
  * @Description: 
 -->
-<h1 id="link-和-import-的区别" tabindex="-1"><a class="header-anchor" href="#link-和-import-的区别" aria-hidden="true">#</a> <a href="#">#</a> link 和 import 的区别</h1>
+<h1 id="link-和-import-的区别" tabindex="-1"><a class="header-anchor" href="#link-和-import-的区别" aria-hidden="true">#</a> link 和 import 的区别</h1>
 <p>在html中引入外部的CSS有2种方式，link标签和@import，那么它们之间什么区别呢？</p>
 <p>1、从属关系区别</p>
 <ul>

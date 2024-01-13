@@ -1,5 +1,5 @@
-<template><div><h1 id="如何实现单行-多行文本溢出的省略样式" tabindex="-1"><a class="header-anchor" href="#如何实现单行-多行文本溢出的省略样式" aria-hidden="true">#</a> <a href="#">#</a> 如何实现单行／多行文本溢出的省略样式？</h1>
-<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> <a href="#">#</a> 简版</h2>
+<template><div><h1 id="如何实现单行-多行文本溢出的省略样式" tabindex="-1"><a class="header-anchor" href="#如何实现单行-多行文本溢出的省略样式" aria-hidden="true">#</a> 如何实现单行／多行文本溢出的省略样式？</h1>
+<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> 简版</h2>
 <p>答: 单行文本溢出换省略号</p>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code>​ <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span> // 文字强制不换行
  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span> // 文字溢出换省略号
@@ -10,15 +10,15 @@
  <span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span> /_ 限制文本的行数，表示文本第多少行省略 _/
  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>/_ 打点展示 _/
  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>/_ 超出部分进行隐藏 _/
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="一、前言" tabindex="-1"><a class="header-anchor" href="#一、前言" aria-hidden="true">#</a> <a href="#">#</a> 一、前言</h2>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="一、前言" tabindex="-1"><a class="header-anchor" href="#一、前言" aria-hidden="true">#</a> 一、前言</h2>
 <p>在日常开发展示页面，如果一段文本的数量过长，受制于元素宽度的因素，有可能不能完全显示，为了提高用户的使用体验，这个时候就需要我们把溢出的文本显示成省略号</p>
 <p>对于文本的溢出，我们可以分成两种形式：</p>
 <ul>
 <li>单行文本溢出</li>
 <li>多行文本溢出</li>
 </ul>
-<h2 id="二、实现方式" tabindex="-1"><a class="header-anchor" href="#二、实现方式" aria-hidden="true">#</a> <a href="#">#</a> 二、实现方式</h2>
-<h3 id="单行文本溢出省略" tabindex="-1"><a class="header-anchor" href="#单行文本溢出省略" aria-hidden="true">#</a> <a href="#">#</a> 单行文本溢出省略</h3>
+<h2 id="二、实现方式" tabindex="-1"><a class="header-anchor" href="#二、实现方式" aria-hidden="true">#</a> 二、实现方式</h2>
+<h3 id="单行文本溢出省略" tabindex="-1"><a class="header-anchor" href="#单行文本溢出省略" aria-hidden="true">#</a> 单行文本溢出省略</h3>
 <p>理解也很简单，即文本在一行内显示，超出部分以省略号的形式展现</p>
 <p>实现方式也很简单，涉及的<code v-pre>css</code>属性有：</p>
 <ul>
@@ -50,14 +50,14 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>效果如下：</p>
 <p><img src="https://static.vue-js.com/bb3048e0-a0e9-11eb-85f6-6fac77c0c9b3.png" alt=""></p>
 <p>可以看到，设置单行文本溢出较为简单，并且省略号显示的位置较好</p>
-<h3 id="多行文本溢出省略" tabindex="-1"><a class="header-anchor" href="#多行文本溢出省略" aria-hidden="true">#</a> <a href="#">#</a> 多行文本溢出省略</h3>
+<h3 id="多行文本溢出省略" tabindex="-1"><a class="header-anchor" href="#多行文本溢出省略" aria-hidden="true">#</a> 多行文本溢出省略</h3>
 <p>多行文本溢出的时候，我们可以分为两种情况：</p>
 <ul>
 <li>基于高度截断</li>
 <li>基于行数截断</li>
 </ul>
-<h4 id="基于高度截断" tabindex="-1"><a class="header-anchor" href="#基于高度截断" aria-hidden="true">#</a> <a href="#">#</a> 基于高度截断</h4>
-<h4 id="伪元素-定位" tabindex="-1"><a class="header-anchor" href="#伪元素-定位" aria-hidden="true">#</a> <a href="#">#</a> 伪元素 + 定位</h4>
+<h4 id="基于高度截断" tabindex="-1"><a class="header-anchor" href="#基于高度截断" aria-hidden="true">#</a> 基于高度截断</h4>
+<h4 id="伪元素-定位" tabindex="-1"><a class="header-anchor" href="#伪元素-定位" aria-hidden="true">#</a> 伪元素 + 定位</h4>
 <p>核心的<code v-pre>css</code>代码结构如下：</p>
 <ul>
 <li>position: relative：为伪元素绝对定位</li>
@@ -94,7 +94,7 @@
 <li>响应式截断，根据不同宽度做出调整</li>
 </ul>
 <p>一般文本存在英文的时候，可以设置<code v-pre>word-break: break-all</code>使一个单词能够在换行时进行拆分</p>
-<h4 id="基于行数截断" tabindex="-1"><a class="header-anchor" href="#基于行数截断" aria-hidden="true">#</a> <a href="#">#</a> 基于行数截断</h4>
+<h4 id="基于行数截断" tabindex="-1"><a class="header-anchor" href="#基于行数截断" aria-hidden="true">#</a> 基于行数截断</h4>
 <p>纯<code v-pre>css</code>实现也非常简单，核心的<code v-pre>css</code>代码如下：</p>
 <ul>
 <li>-webkit-line-clamp: 2：用来限制在一个块元素显示的文本的行数，为了实现该效果，它需要组合其他的 WebKit 属性）</li>

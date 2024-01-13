@@ -1,5 +1,5 @@
-<template><div><h1 id="什么是响应式设计-响应式设计的基本原理是什么-如何做" tabindex="-1"><a class="header-anchor" href="#什么是响应式设计-响应式设计的基本原理是什么-如何做" aria-hidden="true">#</a> <a href="#">#</a> 什么是响应式设计？响应式设计的基本原理是什么？如何做？</h1>
-<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> <a href="#">#</a> 简版</h2>
+<template><div><h1 id="什么是响应式设计-响应式设计的基本原理是什么-如何做" tabindex="-1"><a class="header-anchor" href="#什么是响应式设计-响应式设计的基本原理是什么-如何做" aria-hidden="true">#</a> 什么是响应式设计？响应式设计的基本原理是什么？如何做？</h1>
+<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> 简版</h2>
 <p>我这么理解:响应式布局就是一个网站能够兼容多个设备，可以根据屏幕的大小自动调整页面的的展示方式以及布局，我们不用为每一个设备做一个特定的版本; 应式网站的特点:</p>
 <ul>
 <li>
@@ -15,7 +15,7 @@
 <p>链接:https://juejin.cn/post/6844904082751111176</p>
 </li>
 </ul>
-<h2 id="一、是什么" tabindex="-1"><a class="header-anchor" href="#一、是什么" aria-hidden="true">#</a> <a href="#">#</a> 一、是什么</h2>
+<h2 id="一、是什么" tabindex="-1"><a class="header-anchor" href="#一、是什么" aria-hidden="true">#</a> 一、是什么</h2>
 <p>响应式网站设计（Responsive Web design）是一种网络页面设计布局，页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行相应的响应和调整</p>
 <p>描述响应式界面最著名的一句话就是“Content is like water”</p>
 <p>大白话便是“如果将屏幕看作容器，那么内容就像水一样”</p>
@@ -32,7 +32,7 @@
 </li>
 </ul>
 <p><img src="https://static.vue-js.com/ae68be30-9dba-11eb-85f6-6fac77c0c9b3.png" alt=""></p>
-<h2 id="二、实现方式" tabindex="-1"><a class="header-anchor" href="#二、实现方式" aria-hidden="true">#</a> <a href="#">#</a> 二、实现方式</h2>
+<h2 id="二、实现方式" tabindex="-1"><a class="header-anchor" href="#二、实现方式" aria-hidden="true">#</a> 二、实现方式</h2>
 <p>响应式设计的基本原理是通过媒体查询检测不同的设备屏幕尺寸做处理，为了处理移动端，页面头部必须有<code v-pre>meta</code>声明<code v-pre>viewport</code></p>
 <div class="language-html line-numbers-mode" data-ext="html"><pre v-pre class="language-html"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no”>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>属性对应如下：</p>
@@ -57,7 +57,7 @@
 <li>vw/vh</li>
 <li>rem</li>
 </ul>
-<h3 id="媒体查询" tabindex="-1"><a class="header-anchor" href="#媒体查询" aria-hidden="true">#</a> <a href="#">#</a> 媒体查询</h3>
+<h3 id="媒体查询" tabindex="-1"><a class="header-anchor" href="#媒体查询" aria-hidden="true">#</a> 媒体查询</h3>
 <p><code v-pre>CSS3</code>中的增加了更多的媒体查询，就像<code v-pre>if</code>条件表达式一样，我们可以设置不同类型的媒体条件，并根据对应的条件，给相应符合条件的媒体调用相对应的样式表</p>
 <p>使用<code v-pre>@Media</code>查询，可以针对不同的媒体类型定义不同的样式，如：</p>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 1920px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
@@ -71,7 +71,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过媒体查询，可以通过给不同分辨率的设备编写不同的样式来实现响应式的布局，比如我们为不同分辨率的屏幕，设置不同的背景图片</p>
 <p>比如给小屏幕手机设置@2x 图，为大屏幕手机设置@3x 图，通过媒体查询就能很方便的实现</p>
-<h3 id="百分比" tabindex="-1"><a class="header-anchor" href="#百分比" aria-hidden="true">#</a> <a href="#">#</a> 百分比</h3>
+<h3 id="百分比" tabindex="-1"><a class="header-anchor" href="#百分比" aria-hidden="true">#</a> 百分比</h3>
 <p>通过百分比单位 &quot; % &quot; 来实现响应式的效果</p>
 <p>比如当浏览器的宽度或者高度发生变化时，通过百分比单位，可以使得浏览器中的组件的宽和高随着浏览器的变化而变化，从而实现响应式的效果</p>
 <p><code v-pre>height</code>、<code v-pre>width</code>属性的百分比依托于父标签的宽高，但是其他盒子属性则不完全依赖父元素：</p>
@@ -90,10 +90,10 @@
 </li>
 </ul>
 <p>可以看到每个属性都使用百分比，会照成布局的复杂度，所以不建议使用百分比来实现响应式</p>
-<h3 id="vw-vh" tabindex="-1"><a class="header-anchor" href="#vw-vh" aria-hidden="true">#</a> <a href="#">#</a> vw/vh</h3>
+<h3 id="vw-vh" tabindex="-1"><a class="header-anchor" href="#vw-vh" aria-hidden="true">#</a> vw/vh</h3>
 <p><code v-pre>vw</code>表示相对于视图窗口的宽度，<code v-pre>vh</code>表示相对于视图窗口高度。 任意层级元素，在使用<code v-pre>vw</code>单位的情况下，<code v-pre>1vw</code>都等于视图宽度的百分之一</p>
 <p>与百分比布局很相似，在以前文章提过与<code v-pre>%</code>的区别，这里就不再展开述说</p>
-<h3 id="rem" tabindex="-1"><a class="header-anchor" href="#rem" aria-hidden="true">#</a> <a href="#">#</a> rem</h3>
+<h3 id="rem" tabindex="-1"><a class="header-anchor" href="#rem" aria-hidden="true">#</a> rem</h3>
 <p>在以前也讲到，<code v-pre>rem</code>是相对于根元素<code v-pre>html</code>的<code v-pre>font-size</code>属性，默认情况下浏览器字体大小为<code v-pre>16px</code>，此时<code v-pre>1rem = 16px</code></p>
 <p>可以利用前面提到的媒体查询，针对不同设备分辨率改变<code v-pre>font-size</code>的值，如下：</p>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 414px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
@@ -130,7 +130,7 @@ window<span class="token punctuation">.</span><span class="token function">addEv
 window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'resize'</span><span class="token punctuation">,</span> init<span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>无论设备可视窗口如何变化，始终设置<code v-pre>rem</code>为<code v-pre>width</code>的 1/10，实现了百分比布局</p>
 <p>除此之外，我们还可以利用主流<code v-pre>UI</code>框架，如：<code v-pre>element ui</code>、<code v-pre>antd</code>提供的栅格布局实现响应式</p>
-<h3 id="小结" tabindex="-1"><a class="header-anchor" href="#小结" aria-hidden="true">#</a> <a href="#">#</a> 小结</h3>
+<h3 id="小结" tabindex="-1"><a class="header-anchor" href="#小结" aria-hidden="true">#</a> 小结</h3>
 <p>响应式设计实现通常会从以下几方面思考：</p>
 <ul>
 <li>弹性盒子（包括图片、表格、视频）和媒体查询等技术</li>
@@ -138,7 +138,7 @@ window<span class="token punctuation">.</span><span class="token function">addEv
 <li>使用相对单位使得内容自适应调节</li>
 <li>选择断点，针对不同断点实现不同布局和内容展示</li>
 </ul>
-<h2 id="三、总结" tabindex="-1"><a class="header-anchor" href="#三、总结" aria-hidden="true">#</a> <a href="#">#</a> 三、总结</h2>
+<h2 id="三、总结" tabindex="-1"><a class="header-anchor" href="#三、总结" aria-hidden="true">#</a> 三、总结</h2>
 <p>响应式布局优点可以看到：</p>
 <ul>
 <li>面对不同分辨率设备灵活性强</li>

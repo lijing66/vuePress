@@ -1,11 +1,11 @@
-<template><div><h1 id="和-区别" tabindex="-1"><a class="header-anchor" href="#和-区别" aria-hidden="true">#</a> <a href="#">#</a> == 和 === 区别</h1>
-<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> <a href="#">#</a> 简版</h2>
+<template><div><h1 id="和-区别" tabindex="-1"><a class="header-anchor" href="#和-区别" aria-hidden="true">#</a> == 和 === 区别</h1>
+<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> 简版</h2>
 <ul>
 <li>= : 一个等号为赋值操作</li>
 <li>== :二个等号为判断,判断的是值是否相等,相等返回 true,不等返回 false</li>
 <li>===: 三个等号为全等,判断的是值和类型是否相等,相等返回 true,不等返回 false</li>
 </ul>
-<h2 id="等于操作符" tabindex="-1"><a class="header-anchor" href="#等于操作符" aria-hidden="true">#</a> <a href="#">#</a> 等于操作符</h2>
+<h2 id="等于操作符" tabindex="-1"><a class="header-anchor" href="#等于操作符" aria-hidden="true">#</a> 等于操作符</h2>
 <p>等于操作符用两个等于号（ == ）表示，如果操作数相等，则会返回 <code v-pre>true</code></p>
 <p>前面文章，我们提到在<code v-pre>JavaScript</code>中存在隐式转换。等于操作符（==）在比较中会先进行类型转换，再确定操作数是否相等</p>
 <p>遵循以下规则：</p>
@@ -58,21 +58,21 @@
 <p>存在 NaN 则返回 false</p>
 </li>
 </ul>
-<h2 id="全等操作符" tabindex="-1"><a class="header-anchor" href="#全等操作符" aria-hidden="true">#</a> <a href="#">#</a> 全等操作符</h2>
+<h2 id="全等操作符" tabindex="-1"><a class="header-anchor" href="#全等操作符" aria-hidden="true">#</a> 全等操作符</h2>
 <p>全等操作符由 3 个等于号（ === ）表示，只有两个操作数在不转换的前提下相等才返回 <code v-pre>true</code>。即类型相同，值也需相同</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">let</span> result1 <span class="token operator">=</span> <span class="token string">'55'</span> <span class="token operator">===</span> <span class="token number">55</span> <span class="token comment">// false，不相等，因为数据类型不同</span>
 <span class="token keyword">let</span> result2 <span class="token operator">=</span> <span class="token number">55</span> <span class="token operator">===</span> <span class="token number">55</span> <span class="token comment">// true，相等，因为数据类型相同值也相同</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>undefined</code> 和 <code v-pre>null</code> 与自身严格相等</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">let</span> result1 <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token operator">===</span> <span class="token keyword">null</span> <span class="token comment">//true</span>
 <span class="token keyword">let</span> result2 <span class="token operator">=</span> <span class="token keyword">undefined</span> <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token comment">//true</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="区别" tabindex="-1"><a class="header-anchor" href="#区别" aria-hidden="true">#</a> <a href="#">#</a> 区别</h2>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="区别" tabindex="-1"><a class="header-anchor" href="#区别" aria-hidden="true">#</a> 区别</h2>
 <p>相等操作符（==）会做类型转换，再进行值的比较，全等运算符不会做类型转换</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">let</span> result1 <span class="token operator">=</span> <span class="token string">'55'</span> <span class="token operator">===</span> <span class="token number">55</span> <span class="token comment">// false，不相等，因为数据类型不同</span>
 <span class="token keyword">let</span> result2 <span class="token operator">=</span> <span class="token number">55</span> <span class="token operator">===</span> <span class="token number">55</span> <span class="token comment">// true，相等，因为数据类型相同值也相同</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>null</code> 和 <code v-pre>undefined</code> 比较，相等操作符（==）为<code v-pre>true</code>，全等为<code v-pre>false</code></p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">let</span> result1 <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token operator">==</span> <span class="token keyword">undefined</span> <span class="token comment">// true</span>
 <span class="token keyword">let</span> result2 <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token comment">// false</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="小结" tabindex="-1"><a class="header-anchor" href="#小结" aria-hidden="true">#</a> <a href="#">#</a> 小结</h3>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="小结" tabindex="-1"><a class="header-anchor" href="#小结" aria-hidden="true">#</a> 小结</h3>
 <p>相等运算符隐藏的类型转换，会带来一些违反直觉的结果</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token string">''</span> <span class="token operator">==</span> <span class="token string">'0'</span> <span class="token comment">// false</span>
 <span class="token number">0</span> <span class="token operator">==</span> <span class="token string">''</span> <span class="token comment">// true</span>
@@ -98,7 +98,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>使用相等操作符（==）的写法明显更加简洁了</p>
 <p>所以，除了在比较对象属性为<code v-pre>null</code>或者<code v-pre>undefined</code>的情况下，我们可以使用相等操作符（==），其他情况建议一律使用全等操作符（===）</p>
-<h2 id="a-1-a-2-a-3" tabindex="-1"><a class="header-anchor" href="#a-1-a-2-a-3" aria-hidden="true">#</a> <a href="#">#</a> a==1&amp;&amp;a==2&amp;&amp;a==3</h2>
+<h2 id="a-1-a-2-a-3" tabindex="-1"><a class="header-anchor" href="#a-1-a-2-a-3" aria-hidden="true">#</a> a==1&amp;&amp;a==2&amp;&amp;a==3</h2>
 <p>这是一道面试题，目标是让<code v-pre>a==1&amp;&amp;a==2&amp;&amp;a==3</code>成立。注意这里是两个等号，</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">value</span> <span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment">// a.valueOf = function() {</span>
@@ -110,7 +110,7 @@ a<span class="token punctuation">.</span><span class="token function-variable fu
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token operator">==</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> a<span class="token operator">==</span><span class="token number">2</span> <span class="token operator">&amp;&amp;</span> a<span class="token operator">==</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>a</code>是一个对象，判断a的值时，对象到数字的转换： 1、如果对象具有valueOf( )方法，后者返回一个原始值，则JavaScript将这个原始值转换为数字（如果需要的话）并返回这个数字。 2、否则，如果对象具有toString( )方法，后者返回一个原始值，则JavaScript将其转化并返回。 3、否则，JavaScript抛出一个类型错误异常。</p>
-<h2 id="a-1-a-2-a-3-1" tabindex="-1"><a class="header-anchor" href="#a-1-a-2-a-3-1" aria-hidden="true">#</a> <a href="#">#</a> a===1&amp;&amp;a===2&amp;&amp;a===3</h2>
+<h2 id="a-1-a-2-a-3-1" tabindex="-1"><a class="header-anchor" href="#a-1-a-2-a-3-1" aria-hidden="true">#</a> a===1&amp;&amp;a===2&amp;&amp;a===3</h2>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//window.value</span>
 Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>

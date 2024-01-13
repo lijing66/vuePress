@@ -1,5 +1,5 @@
-<template><div><h1 id="如何实现两栏布局-右侧自适应-三栏布局中间自适应呢" tabindex="-1"><a class="header-anchor" href="#如何实现两栏布局-右侧自适应-三栏布局中间自适应呢" aria-hidden="true">#</a> <a href="#">#</a> 如何实现两栏布局，右侧自适应？三栏布局中间自适应呢？</h1>
-<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> <a href="#">#</a> 简版</h2>
+<template><div><h1 id="如何实现两栏布局-右侧自适应-三栏布局中间自适应呢" tabindex="-1"><a class="header-anchor" href="#如何实现两栏布局-右侧自适应-三栏布局中间自适应呢" aria-hidden="true">#</a> 如何实现两栏布局，右侧自适应？三栏布局中间自适应呢？</h1>
+<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> 简版</h2>
 <ul>
 <li>
 <p>常见的布局方式有:标准流+浮动(清除浮动)+定位,栅格布局,grid 网格布局,流式布局,flex 布局,display: table 布局</p>
@@ -8,9 +8,9 @@
 <p>布局方式在不考虑兼容性的前提条件下我们优先推荐使用 flex 布局和 grid 布局因为其布局页面更加方便,轻松快捷,在日常布局中我们经常碰到双栏布局和三栏布局,双栏布局也就是左边为侧边栏,右边为主体内容,这种布局适用于内容上具有明显主次关系的网页,我们可以使用 flex 布局进行页面布局,而我们说的三栏布局按照左中右的顺序进行排列，通常中间列最宽，左右两列次之,推荐使用两边使用 float，中间使用 margin,或者 flex 进行布局.</p>
 </li>
 </ul>
-<h2 id="一、背景" tabindex="-1"><a class="header-anchor" href="#一、背景" aria-hidden="true">#</a> <a href="#">#</a> 一、背景</h2>
+<h2 id="一、背景" tabindex="-1"><a class="header-anchor" href="#一、背景" aria-hidden="true">#</a> 一、背景</h2>
 <p>在日常布局中，无论是两栏布局还是三栏布局，使用的频率都非常高</p>
-<h3 id="两栏布局" tabindex="-1"><a class="header-anchor" href="#两栏布局" aria-hidden="true">#</a> <a href="#">#</a> 两栏布局</h3>
+<h3 id="两栏布局" tabindex="-1"><a class="header-anchor" href="#两栏布局" aria-hidden="true">#</a> 两栏布局</h3>
 <p>两栏布局实现效果就是将页面分割成左右宽度不等的两列，宽度较小的列设置为固定宽度，剩余宽度由另一列撑满，</p>
 <p>比如 <code v-pre>Ant Design</code> 文档，蓝色区域为主要内容布局容器，侧边栏为次要内容布局容器</p>
 <blockquote>
@@ -18,11 +18,11 @@
 </blockquote>
 <p><img src="https://static.vue-js.com/fcb8ac50-976e-11eb-85f6-6fac77c0c9b3.png" alt=""></p>
 <p>这种布局适用于内容上具有明显主次关系的网页</p>
-<h3 id="三栏布局" tabindex="-1"><a class="header-anchor" href="#三栏布局" aria-hidden="true">#</a> <a href="#">#</a> 三栏布局</h3>
+<h3 id="三栏布局" tabindex="-1"><a class="header-anchor" href="#三栏布局" aria-hidden="true">#</a> 三栏布局</h3>
 <p>三栏布局按照左中右的顺序进行排列，通常中间列最宽，左右两列次之</p>
 <p>大家最常见的就是<code v-pre>github</code>：</p>
 <p><img src="https://static.vue-js.com/0bf016e0-976f-11eb-ab90-d9ae814b240d.png" alt=""></p>
-<h2 id="二、双栏布局" tabindex="-1"><a class="header-anchor" href="#二、双栏布局" aria-hidden="true">#</a> <a href="#">#</a> 二、双栏布局</h2>
+<h2 id="二、双栏布局" tabindex="-1"><a class="header-anchor" href="#二、双栏布局" aria-hidden="true">#</a> 二、双栏布局</h2>
 <p>双栏布局非常常见，往往是以一个定宽栏和一个自适应的栏并排展示存在</p>
 <p>实现思路也非常的简单：</p>
 <ul>
@@ -52,7 +52,7 @@
   &lt;div class=<span class="token string">"right"</span>>右边&lt;/div>
 &lt;/div>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>还有一种更为简单的使用则是采取：flex 弹性布局</p>
-<h3 id="flex-弹性布局" tabindex="-1"><a class="header-anchor" href="#flex-弹性布局" aria-hidden="true">#</a> <a href="#">#</a> flex 弹性布局</h3>
+<h3 id="flex-弹性布局" tabindex="-1"><a class="header-anchor" href="#flex-弹性布局" aria-hidden="true">#</a> flex 弹性布局</h3>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">&lt;style>
   .box</span> <span class="token punctuation">{</span>
     <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
@@ -71,7 +71,7 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>flex</code>可以说是最好的方案了，代码少，使用简单</p>
 <p>注意的是，<code v-pre>flex</code>容器的一个默认属性值:<code v-pre>align-items: stretch;</code></p>
 <p>这个属性导致了列等高的效果。 为了让两个盒子高度自动，需要设置: <code v-pre>align-items: flex-start</code></p>
-<h2 id="三、三栏布局" tabindex="-1"><a class="header-anchor" href="#三、三栏布局" aria-hidden="true">#</a> <a href="#">#</a> 三、三栏布局</h2>
+<h2 id="三、三栏布局" tabindex="-1"><a class="header-anchor" href="#三、三栏布局" aria-hidden="true">#</a> 三、三栏布局</h2>
 <p>实现三栏布局中间自适应的布局方式有：</p>
 <ul>
 <li>两边使用 float，中间使用 margin</li>
@@ -81,7 +81,7 @@
 <li>flex 实现</li>
 <li>grid 网格布局</li>
 </ul>
-<h3 id="两边使用-float-中间使用-margin" tabindex="-1"><a class="header-anchor" href="#两边使用-float-中间使用-margin" aria-hidden="true">#</a> <a href="#">#</a> 两边使用 float，中间使用 margin</h3>
+<h3 id="两边使用-float-中间使用-margin" tabindex="-1"><a class="header-anchor" href="#两边使用-float-中间使用-margin" aria-hidden="true">#</a> 两边使用 float，中间使用 margin</h3>
 <p>需要将中间的内容放在<code v-pre>html</code>结构最后，否则右侧会臣在中间内容的下方</p>
 <p>实现代码如下：</p>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">&lt;style>
@@ -130,7 +130,7 @@
 <p>右边在主体内容之前，如果是响应式设计，不能简单的换行展示</p>
 </li>
 </ul>
-<h3 id="两边使用-absolute-中间使用-margin" tabindex="-1"><a class="header-anchor" href="#两边使用-absolute-中间使用-margin" aria-hidden="true">#</a> <a href="#">#</a> 两边使用 absolute，中间使用 margin</h3>
+<h3 id="两边使用-absolute-中间使用-margin" tabindex="-1"><a class="header-anchor" href="#两边使用-absolute-中间使用-margin" aria-hidden="true">#</a> 两边使用 absolute，中间使用 margin</h3>
 <p>基于绝对定位的三栏布局：注意绝对定位的元素脱离文档流，相对于最近的已经定位的祖先元素进行定位。无需考虑 HTML 中结构的顺序</p>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">&lt;style>
   .container</span> <span class="token punctuation">{</span>
@@ -178,7 +178,7 @@
 <li>左右两边使用绝对定位，固定在两侧。</li>
 <li>中间占满一行，但通过 margin 和左右两边留出 10px 的间隔</li>
 </ul>
-<h3 id="两边使用-float-和负-margin" tabindex="-1"><a class="header-anchor" href="#两边使用-float-和负-margin" aria-hidden="true">#</a> <a href="#">#</a> 两边使用 float 和负 margin</h3>
+<h3 id="两边使用-float-和负-margin" tabindex="-1"><a class="header-anchor" href="#两边使用-float-和负-margin" aria-hidden="true">#</a> 两边使用 float 和负 margin</h3>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">&lt;style>
   .left,
   .right,
@@ -228,7 +228,7 @@
 <li>增加了 .main-wrapper 一层，结构变复杂</li>
 <li>使用负 margin，调试也相对麻烦</li>
 </ul>
-<h3 id="使用-display-table-实现" tabindex="-1"><a class="header-anchor" href="#使用-display-table-实现" aria-hidden="true">#</a> <a href="#">#</a> 使用 display: table 实现</h3>
+<h3 id="使用-display-table-实现" tabindex="-1"><a class="header-anchor" href="#使用-display-table-实现" aria-hidden="true">#</a> 使用 display: table 实现</h3>
 <p><code v-pre>&lt;table&gt;</code> 标签用于展示行列数据，不适合用于布局。但是可以使用 <code v-pre>display: table</code> 来实现布局的效果</p>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">&lt;style>
   .container</span> <span class="token punctuation">{</span>
@@ -270,7 +270,7 @@
 <li>内层的左中右通过 display: table-cell 设置为表格单元。</li>
 <li>左右设置固定宽度，中间设置 width: 100% 填充剩下的宽度</li>
 </ul>
-<h3 id="使用-flex-实现" tabindex="-1"><a class="header-anchor" href="#使用-flex-实现" aria-hidden="true">#</a> <a href="#">#</a> 使用 flex 实现</h3>
+<h3 id="使用-flex-实现" tabindex="-1"><a class="header-anchor" href="#使用-flex-实现" aria-hidden="true">#</a> 使用 flex 实现</h3>
 <p>利用<code v-pre>flex</code>弹性布局，可以简单实现中间自适应</p>
 <p>代码如下：</p>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">&lt;style type="text/css">
@@ -317,7 +317,7 @@
 <li>结构简单直观</li>
 <li>可以结合 flex 的其他功能实现更多效果，例如使用 order 属性调整显示顺序，让主体内容优先加载，但展示在中间</li>
 </ul>
-<h3 id="grid-网格布局" tabindex="-1"><a class="header-anchor" href="#grid-网格布局" aria-hidden="true">#</a> <a href="#">#</a> grid 网格布局</h3>
+<h3 id="grid-网格布局" tabindex="-1"><a class="header-anchor" href="#grid-网格布局" aria-hidden="true">#</a> grid 网格布局</h3>
 <p>代码如下：</p>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">&lt;style>
   .wrap</span> <span class="token punctuation">{</span>

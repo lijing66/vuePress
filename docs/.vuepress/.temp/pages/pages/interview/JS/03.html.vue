@@ -1,9 +1,9 @@
-<template><div><h1 id="typeof-与-instanceof-区别" tabindex="-1"><a class="header-anchor" href="#typeof-与-instanceof-区别" aria-hidden="true">#</a> <a href="#">#</a> typeof 与 instanceof 区别</h1>
-<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> <a href="#">#</a> 简版</h2>
+<template><div><h1 id="typeof-与-instanceof-区别" tabindex="-1"><a class="header-anchor" href="#typeof-与-instanceof-区别" aria-hidden="true">#</a> typeof 与 instanceof 区别</h1>
+<h2 id="简版" tabindex="-1"><a class="header-anchor" href="#简版" aria-hidden="true">#</a> 简版</h2>
 <p>typeof 一般是用来判断变量是否存在,返回他的类型,其中基本数据类型 null 返回的是一个 object,但 null 不属于引用数据类型,typeof 除了判断 function 函数会识别,其他的引用类型输出为 object</p>
 <p>instanceof 一般是用来判断引用数据类型,但不能正确判断基本数据类型,根据在原型链中查找判断当前数据的原型对象是否存在返回布尔类型</p>
 <p>2 种方法各有各的优缺点,一般我们推荐判断数据类型使用 Object.prototype.toString,返回统一的格式[object Xxx]</p>
-<h2 id="一、typeof" tabindex="-1"><a class="header-anchor" href="#一、typeof" aria-hidden="true">#</a> <a href="#">#</a> 一、typeof</h2>
+<h2 id="一、typeof" tabindex="-1"><a class="header-anchor" href="#一、typeof" aria-hidden="true">#</a> 一、typeof</h2>
 <p><code v-pre>typeof</code> 操作符返回一个字符串，表示未经计算的操作数的类型</p>
 <p>使用方法如下：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">typeof</span> operand
@@ -27,7 +27,7 @@
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">!=</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">//变量存在</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="instanceof" tabindex="-1"><a class="header-anchor" href="#instanceof" aria-hidden="true">#</a> <a href="#">#</a> instanceof</h2>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="instanceof" tabindex="-1"><a class="header-anchor" href="#instanceof" aria-hidden="true">#</a> instanceof</h2>
 <p><code v-pre>instanceof</code> 运算符用于检测构造函数的 <code v-pre>prototype</code> 属性是否出现在某个实例对象的原型链上</p>
 <p>使用如下：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code>object <span class="token keyword">instanceof</span> <span class="token class-name">constructor</span>
@@ -54,7 +54,7 @@ str <span class="token keyword">instanceof</span> <span class="token class-name"
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>也就是顺着原型链去找，直到找到相同的原型对象，返回<code v-pre>true</code>，否则为<code v-pre>false</code></p>
-<h2 id="区别" tabindex="-1"><a class="header-anchor" href="#区别" aria-hidden="true">#</a> <a href="#">#</a> 区别</h2>
+<h2 id="区别" tabindex="-1"><a class="header-anchor" href="#区别" aria-hidden="true">#</a> 区别</h2>
 <p><code v-pre>typeof</code>与<code v-pre>instanceof</code>都是判断数据类型的方法，区别如下：</p>
 <ul>
 <li>
